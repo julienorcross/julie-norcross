@@ -1,0 +1,42 @@
+.opera-wrapper {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2rem;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+  }
+
+  .opera-img {
+    grid-column: 1 / span 3;
+    background: url('../img/opera_1.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 80vh;
+  }
+
+  .opera-text {
+    grid-column: 4 / span 3;
+  }
+
+  .opera-showcase {
+    grid-column: 1 / 6;
+  }
+
+  // .opera-spread {
+  //   grid-column: span 2;
+  // }
+
+  // .opera-spread-main {
+  //   grid-column: span 6;
+  // }
+}

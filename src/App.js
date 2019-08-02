@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from './Header/Header';
+import WorkIntro from './WorkIntro/WorkIntro';
+import ImageShowcase from './ImageShowcase/ImageShowcase';
+import otello from './img/Otello.jpg';
+import samson from './img/SamsonDelilah.jpg';
+import giovanni from './img/DonGiovanni.jpg';
+
+const operaSpreads = [otello, samson, giovanni];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header />
+      <WorkIntro />
+      <ImageShowcase className="opera-showcase" imgs={operaSpreads} />
     </div>
   );
 }

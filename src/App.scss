@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(233, 233, 233);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Menlo, Consola, 'Courier New', Courier, monospace;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom: 0.8rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
