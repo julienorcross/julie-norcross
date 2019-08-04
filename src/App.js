@@ -1,6 +1,9 @@
 import React from 'react';
+import { Route, BrowserRouter } from 'react-router-dom';
+
 import './App.scss';
 import Header from './Header/Header';
+import Contact from './Contact/Contact';
 import WorkIntro from './WorkIntro/WorkIntro';
 import ImageShowcase from './ImageShowcase/ImageShowcase';
 import otello from './img/Otello.jpg';
@@ -13,8 +16,10 @@ function App() {
   return (
     <div className="container">
       <Header />
+
       <WorkIntro />
       <ImageShowcase className="opera-showcase" imgs={operaSpreads} />
+      <Contact />
     </div>
   );
 }

@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import './WorkIntro.scss';
 
-class Opera extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+class WorkIntro extends Component {
   render() {
     return (
-      <div className="opera-wrapper">
-        <div className="opera-img" />
-        <div className="opera-text">
+      <div className="work-intro-wrapper">
+        <div className="work-intro-img" />
+        <div className="work-intro-text">
           <h2>Washington National Opera</h2>
           <h3>2019/2020 Subscription Brochure</h3>
           <p>
@@ -32,4 +28,4 @@ class Opera extends Component {
   }
 }
 
-export default Opera;
+export default WorkIntro;

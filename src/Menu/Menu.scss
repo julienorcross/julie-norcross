@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 a {
   text-decoration: none;
 }
@@ -12,6 +14,8 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  // position: absolute;
+  z-index: 2;
   ul {
     list-style: none;
   }
@@ -19,10 +23,11 @@ button:focus {
   .menu-links {
     width: 100%;
     ul {
+      display: none;
+
       text-align: center;
       font-size: 3rem;
       line-height: 4rem;
-      opacity: 0;
       transition: opacity ease 0.4s;
 
       li {
@@ -56,11 +61,12 @@ button:focus {
       button {
         margin: 2rem;
         transition: all 0.4s ease;
-        font-size: 3rem;
         border: none;
         background: transparent;
-        line-height: 3rem;
         cursor: pointer;
+        img {
+          width: 25px;
+        }
       }
     }
   }
@@ -80,12 +86,14 @@ button:focus {
   transform: scale(1);
 
   & + .menu-links {
+    width: 100%;
     .menu-hamburger button {
       transform: rotate(225deg);
       transform-origin: center center;
       transition: all 0.4s ease;
     }
     ul {
+      display: block;
       opacity: 1;
       transition: opacity 0.4s ease 0.4s;
     }
@@ -103,7 +111,7 @@ button:focus {
     width: auto;
     .menu-links {
       ul {
-        font-family: Menlo, Consola, 'Courier New', Courier, monospace;
+        font-family: $primary-fonts;
         font-weight: 700;
         font-size: 0.8rem;
         text-transform: uppercase;

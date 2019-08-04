@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './Menu.scss';
+import plus from '../img/plus.svg';
+import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,7 +26,7 @@ class Menu extends Component {
         <div className="menu-links">
           <div className="menu-hamburger">
             <button onClick={() => this.toggleMenu()}>
-              <FontAwesomeIcon icon={faPlus} />
+              <img src={plus} alt="" />
             </button>
           </div>
           <ul>

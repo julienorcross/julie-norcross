@@ -1,0 +1,64 @@
+@import '../variables.scss';
+
+.contact {
+  margin: 2rem 0;
+
+  .form-group {
+    position: relative;
+
+    input,
+    textarea {
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      margin: 1rem 0;
+      background: transparent;
+      border-bottom: 1px solid #ccc;
+
+      &:focus {
+        outline: none;
+        // border-bottom: 3px solid black;
+        // transition: all 0.5s linear;
+        & + .underline {
+          width: 100%;
+        }
+      }
+
+      &::placeholder {
+        font-size: 0.8rem;
+        font-family: $primary-fonts;
+      }
+    }
+    .underline {
+      position: absolute;
+      z-index: 2;
+      margin-top: -1.15rem;
+      height: 2px;
+      width: 0;
+      background-color: #333;
+      -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+      transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+    }
+    textarea + .underline {
+      margin-top: -1.3rem;
+    }
+  }
+  form input[type='submit'] {
+    font-size: 0.8rem;
+    font-family: $primary-fonts;
+    color: rgb(143, 143, 143);
+    width: 100%;
+    padding: 0.8rem 3rem;
+    border: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+    font-family: $primary-fonts;
+
+    &:hover {
+      cursor: pointer;
+      color: rgb(109, 109, 109);
+      border: 1px solid rgb(184, 184, 184);
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
