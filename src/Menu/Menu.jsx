@@ -31,16 +31,16 @@ class Menu extends Component {
           </div>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#">Github</a>
+              <a href="https://github.com/julienorcross">Github</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link to="/Contact">Contact</Link>
             </li>
           </ul>
         </div>

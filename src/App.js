@@ -3,7 +3,9 @@ import { Route, BrowserRouter } from 'react-router-dom';
 
 import './App.scss';
 import Header from './Header/Header';
+import About from './About/About';
 import Contact from './Contact/Contact';
+import WorkSection from './WorkSection/WorkSection';
 import WorkIntro from './WorkIntro/WorkIntro';
 import ImageShowcase from './ImageShowcase/ImageShowcase';
 import otello from './img/Otello.jpg';
@@ -14,13 +16,17 @@ const operaSpreads = [otello, samson, giovanni];
 
 function App() {
   return (
-    <div className="container">
-      <Header />
+    <BrowserRouter>
+      <div className="container">
+        <Header />
+        <Route path="/" exact component={() => <WorkSection />} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
 
-      <WorkIntro />
-      <ImageShowcase className="opera-showcase" imgs={operaSpreads} />
-      <Contact />
-    </div>
+        <WorkIntro />
+        <ImageShowcase className="opera-showcase" imgs={operaSpreads} />
+      </div>
+    </BrowserRouter>
   );
 }
 
