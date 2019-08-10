@@ -34,3 +34,14 @@
     grid-column: 1 / 6;
   }
 }
+
+@media (max-width: 600px) {
+  .work-intro-wrapper {
+    .work-intro-img {
+      grid-column: 1 / span 6;
+    }
+    .work-intro-text {
+      grid-column: 1 / span 6;
+    }
+  }
+}

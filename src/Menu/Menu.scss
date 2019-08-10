@@ -111,6 +111,8 @@ button:focus {
     width: auto;
     .menu-links {
       ul {
+        display: block;
+
         font-family: $primary-fonts;
         font-weight: 700;
         font-size: 0.8rem;
