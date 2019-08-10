@@ -1,0 +1,140 @@
+@import '../variables.scss';
+
+a {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.menu-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // position: absolute;
+  z-index: 2;
+  ul {
+    list-style: none;
+  }
+
+  .menu-links {
+    width: 100%;
+    ul {
+      display: none;
+
+      text-align: center;
+      font-size: 3rem;
+      line-height: 4rem;
+      transition: opacity ease 0.4s;
+
+      li {
+        margin-bottom: 1rem;
+
+        a {
+          position: relative;
+          &:after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            background-color: black;
+            width: 0;
+            left: 50%;
+            bottom: -5px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+            transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+          }
+          &:hover:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .menu-hamburger {
+      width: 100%;
+      text-align: right;
+      button {
+        margin: 2rem;
+        transition: all 0.4s ease;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        img {
+          width: 25px;
+        }
+      }
+    }
+  }
+}
+
+.menu-overlay {
+  position: absolute;
+  background-color: pink;
+  z-index: -1;
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vh;
+}
+
+.menuOpen {
+  transition: all 0.4s ease;
+  transform: scale(1);
+
+  & + .menu-links {
+    width: 100%;
+    .menu-hamburger button {
+      transform: rotate(225deg);
+      transform-origin: center center;
+      transition: all 0.4s ease;
+    }
+    ul {
+      display: block;
+      opacity: 1;
+      transition: opacity 0.4s ease 0.4s;
+    }
+  }
+}
+
+.menuClosed {
+  transform: scale(0);
+  transition: all 0.4s ease 0.2s;
+}
+
+@media (min-width: 600px) {
+  .menu-wrapper {
+    display: block;
+    width: auto;
+    .menu-links {
+      ul {
+        display: block;
+
+        font-family: $primary-fonts;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        opacity: 1;
+        transition: none;
+        li {
+          display: inline;
+          padding-left: 2rem;
+          a {
+            color: black;
+          }
+        }
+      }
+    }
+
+    .menu-hamburger {
+      display: none;
+    }
+    .menu-overlay {
+      display: none;
+    }
+  }
+}
