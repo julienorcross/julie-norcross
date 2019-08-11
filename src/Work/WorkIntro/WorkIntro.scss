@@ -35,7 +35,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media all and (max-width: 600px) {
   .work-intro-wrapper {
     .work-intro-img {
       grid-column: 1 / span 6;

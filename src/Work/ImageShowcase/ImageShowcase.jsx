@@ -34,7 +34,9 @@ class ImageShowcase extends Component {
 
     return (
       <div className="showcase">
-        <img src={this.state.main} className="showcase-main" alt="" />
+        <div className="showcase-main-container">
+          <img src={this.state.main} className="showcase-main" alt="" />
+        </div>
         <div className="showcase-thumbnails">{thumbnails}</div>
       </div>
     );

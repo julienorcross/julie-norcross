@@ -1,23 +1,19 @@
 import React from 'react';
 import './WorkItem.scss';
+import WorkIntro from '../WorkIntro/WorkIntro';
+import ImageShowcase from '../ImageShowcase/ImageShowcase';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 const WorkItem = props => {
   function findItem(workItem) {
     return workItem.slug === props.match.params.workSlug;
   }
   const item = props.items.find(findItem);
-  function createMarkup() {
-    return { __html: item.description };
-  }
   return (
-    <div className="work">
-      <div className="title">
-        <h2>{item.title}</h2>
-        <h3>{item.subtitle}</h3>
-      </div>
-      <div className="description">
-        <div dangerouslySetInnerHTML={createMarkup()} />
-      </div>
+    <div className="work-item-wrapper">
+      <WorkIntro item={item} />
+      <ImageShowcase imgs={item.images} />
     </div>
   );
 };

@@ -1,3 +1,8 @@
+import wno_preview from '../img/opera_1.jpg';
+import wno_otello from '../img/Otello.jpg';
+import wno_samsonDelilah from '../img/SamsonDelilah.jpg';
+import wno_donGiovanni from '../img/DonGiovanni.jpg';
+
 import rcdc_preview from '../img/rcdc/preview.jpg';
 import rcdc_home from '../img/rcdc/home.jpg';
 import rcdc_list from '../img/rcdc/listing.jpg';
@@ -11,6 +16,14 @@ import franz_about from '../img/kevinfranz/about.gif';
 import jazz_preview from '../img/jazz/preview.jpg';
 
 const workItems = [
+  {
+    thumbnailPath: wno_preview,
+    images: [wno_otello, wno_samsonDelilah, wno_donGiovanni],
+    title: 'Washington National Opera',
+    subtitle: '2019/2020 Subscriptions Brochure',
+    slug: 'wno1920',
+    description: ''
+  },
   {
     thumbnailPath: rcdc_preview,
     images: [rcdc_home, rcdc_wfd, rcdc_list, rcdc_post],

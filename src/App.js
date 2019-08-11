@@ -7,7 +7,6 @@ import Header from './Layout/Header/Header';
 import About from './About/About';
 import Contact from './Contact/Contact';
 import WorkSection from './Work/WorkSection/WorkSection';
-import WorkIntro from './Work/WorkIntro/WorkIntro';
 import ImageShowcase from './Work/ImageShowcase/ImageShowcase';
 import WorkItem from './Work/WorkItem/WorkItem';
 import otello from './img/Otello.jpg';
@@ -32,7 +31,6 @@ function App() {
           path="/work/:workSlug"
           component={props => <WorkItem items={workItems} {...props} />}
         />
-        <ImageShowcase className="opera-showcase" imgs={operaSpreads} />
       </div>
     </BrowserRouter>
   );

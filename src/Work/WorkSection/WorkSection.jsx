@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import WorkThumbnail from '../WorkThumbnail/WorkThumbnail';
 import './WorkSection.scss';
 
