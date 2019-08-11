@@ -6,14 +6,29 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
 const WorkItem = props => {
+  const item = props.items.find(findItem);
+
   function findItem(workItem) {
     return workItem.slug === props.match.params.workSlug;
   }
-  const item = props.items.find(findItem);
+
+  // function calculateImageHeight(workItem) {
+  //   workItem.aspectRatio;
+  // }
+
   return (
     <div className="work-item-wrapper">
       <WorkIntro item={item} />
-      <ImageShowcase imgs={item.images} />
+      <Carousel>
+        {item.images.map(imgPath => {
+          return (
+            <div style={{ height: 400 }}>
+              <img src={imgPath} />
+            </div>
+          );
+        })}
+      </Carousel>
+      {/* <ImageShowcase imgs={item.images} /> */}
     </div>
   );
 };
