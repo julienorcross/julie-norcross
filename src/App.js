@@ -9,11 +9,6 @@ import Contact from './Contact/Contact';
 import WorkSection from './Work/WorkSection/WorkSection';
 import ImageShowcase from './Work/ImageShowcase/ImageShowcase';
 import WorkItem from './Work/WorkItem/WorkItem';
-import otello from './img/Otello.jpg';
-import samson from './img/SamsonDelilah.jpg';
-import giovanni from './img/DonGiovanni.jpg';
-
-const operaSpreads = [otello, samson, giovanni];
 
 function App() {
   return (

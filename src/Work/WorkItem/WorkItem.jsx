@@ -45,7 +45,7 @@ class WorkItem extends Component {
     return (
       <div className="work-item-wrapper">
         <WorkIntro item={item} />
-        <Carousel showArrows={false} showIndicators={false}>
+        <Carousel showStatus={false} showArrows={false} showIndicators={false}>
           {item.images.map(imgPath => {
             return (
               <div

@@ -1,7 +1,8 @@
-import wno_preview from '../img/opera_1.jpg';
-import wno_otello from '../img/Otello.jpg';
-import wno_samsonDelilah from '../img/SamsonDelilah.jpg';
-import wno_donGiovanni from '../img/DonGiovanni.jpg';
+import wno_preview from '../img/opera/preview.jpg';
+import wno_main from '../img/opera/opera_1.jpg';
+import wno_otello from '../img/opera/Otello.jpg';
+import wno_samsonDelilah from '../img/opera/SamsonDelilah.jpg';
+import wno_donGiovanni from '../img/opera/DonGiovanni.jpg';
 
 import rcdc_preview from '../img/rcdc/preview.jpg';
 import rcdc_home from '../img/rcdc/home.jpg';

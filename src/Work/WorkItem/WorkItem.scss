@@ -4,6 +4,7 @@
     padding-bottom: 0.3rem;
     .slider-wrapper .custom-slide {
       overflow: auto;
+      overflow-y: scroll;
     }
 
     .thumbs-wrapper {
@@ -28,6 +29,9 @@
 
         .thumb {
           opacity: 0.4;
+          &:hover {
+            opacity: 0.8;
+          }
           &::after {
             content: '';
             position: absolute;
@@ -46,6 +50,10 @@
 
         .selected {
           opacity: 1;
+
+          &:hover {
+            opacity: 1;
+          }
           &::after {
             width: 150px;
           }

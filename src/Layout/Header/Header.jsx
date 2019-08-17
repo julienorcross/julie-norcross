@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div className="header-container">
         <div className="header-brand">
-          <h1>Julie Norcross</h1>
+          <h1>Julie Norcross - 10/01</h1>
         </div>
         <Menu />
       </div>
