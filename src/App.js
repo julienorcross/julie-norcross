@@ -7,6 +7,7 @@ import Header from './Layout/Header/Header';
 import About from './About/About';
 import Contact from './Contact/Contact';
 import WorkSection from './Work/WorkSection/WorkSection';
+import Footer from './Footer/Footer';
 import ImageShowcase from './Work/ImageShowcase/ImageShowcase';
 import WorkItem from './Work/WorkItem/WorkItem';
 
@@ -26,6 +27,7 @@ function App() {
           path="/work/:workSlug"
           component={props => <WorkItem items={workItems} {...props} />}
         />
+        <Footer></Footer>
       </div>
     </BrowserRouter>
   );

@@ -4,10 +4,7 @@ import './Contact.scss';
 const Contact = () => (
   <section className="contact">
     <h2>Contact</h2>
-    <p>
-      Got a question? Comment? Thought? Saw a cool pigeon today and just HAVE to
-      let someone know? I'm all ears.
-    </p>
+    <p>I'm all ears.</p>
     <form name="contact" method="POST" data-netlify="true">
       <div className="form-group">
         {/* <label htmlFor="name">Name</label> */}

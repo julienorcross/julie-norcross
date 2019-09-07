@@ -4,3 +4,15 @@
   grid-gap: 3rem;
   margin: 2rem 0;
 }
+
+@media (max-width: 680px) {
+  .work {
+    grid-gap: 1rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .work {
+    grid-template-columns: repeat(1, auto);
+  }
+}

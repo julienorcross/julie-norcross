@@ -7,15 +7,14 @@
 }
 
 body {
-  background: rgb(233, 233, 233);
 }
 
 ::selection {
-  background: #ff009d; /* WebKit/Blink Browsers */
+  background: $primary-color; /* WebKit/Blink Browsers */
   color: #fff;
 }
 ::-moz-selection {
-  background: #ff009d; /* Gecko Browsers */
+  background: $primary-color; /* Gecko Browsers */
   color: #fff;
 }
 
@@ -26,11 +25,12 @@ h4,
 h5,
 h6 {
   font-family: $primary-fonts;
-  font-weight: 300;
+  font-weight: 900;
+  margin-bottom: 0.4rem;
 }
 
 p {
-  font-family: $secondary-fonts;
+  font-family: $primary-fonts;
   font-size: 1rem;
   line-height: 1.4;
   margin-bottom: 0.8rem;
@@ -40,4 +40,22 @@ p {
   max-width: 964px;
   margin: 2rem auto;
   padding: 2rem;
+}
+
+button,
+form input[type='submit'] {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: $primary-color;
+  color: #fff;
+  font-family: $primary-fonts;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.6rem 4rem;
+  border-radius: 0.2rem;
+
+  &:hover {
+    background-color: $primary-dark-color;
+  }
 }

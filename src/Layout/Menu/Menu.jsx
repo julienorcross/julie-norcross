@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import './Menu.scss';
-import plus from '../../img/plus.svg';
-import { Link } from 'react-router-dom';
+import plus from '../../img/plus_rev.svg';
 
 class Menu extends Component {
   constructor(props) {
@@ -9,8 +9,24 @@ class Menu extends Component {
     this.state = { isOpen: false };
   }
 
+  static defaultProps = {
+    pages: [
+      { title: 'Home', path: '/' },
+      { title: 'About', path: '/about' },
+      { title: 'Contact', path: '/contact' },
+      { title: 'Github', path: 'https://github.com/julienorcross' }
+    ]
+  };
+
   toggleMenu() {
-    this.setState({ isOpen: !this.state.isOpen });
+    this.setState({ isOpen: !this.state.isOpen }, () => {
+      console.log(this.state.isOpen);
+      if (this.state.isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'scroll';
+      }
+    });
   }
 
   render() {
@@ -22,23 +38,69 @@ class Menu extends Component {
         <div className={menuOpen} />
         <div className="menu-links">
           <div className="menu-hamburger">
-            <button onClick={() => this.toggleMenu()}>
-              <img src={plus} alt="" />
-            </button>
+            {/* <button className="menu-plus" onClick={() => this.toggleMenu()}> */}
+            <svg
+              width="25px"
+              height="25px"
+              className="plus-svg"
+              onClick={() => this.toggleMenu()}>
+              <path
+                className="plus-path"
+                d="M14.47,0v10.48H25v4H14.47v10.48H10.5V14.48H0v-4h10.5V0H14.47z"
+              />
+            </svg>
+            {/* <object
+                onClick={() => this.toggleMenu()}
+                className="plus"
+                data={plus}
+                type="image/svg+xml"></object> */}
+            {/* <img src={plus} alt="" /> */}
+            {/* </button> */}
           </div>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
+            {this.props.pages.map(page => {
+              console.log(page.path);
+              const curr = `nav-link ${
+                this.props.location.pathname === page.path ? 'curr' : ''
+              }`;
+              if (page.title !== 'Github') {
+                return (
+                  <li>
+                    <Link to={page.path} className={curr}>
+                      {page.title}
+                    </Link>
+                  </li>
+                );
+              } else {
+                return (
+                  <li>
+                    <a href={page.path} target="_blank" className={curr}>
+                      Github
+                    </a>
+                  </li>
+                );
+              }
+            })}
+            {/* <li>
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
             </li>
             <li>
-              <a href="https://github.com/julienorcross">Github</a>
-            </li>
-            <li>
-              <Link to="/Contact">Contact</Link>
-            </li>
+              <Link className="nav-link" to="/Contact">
+                Contact
+              </Link>
+            </li> */}
+            {/* <li>
+              <a className="github" href="https://github.com/julienorcross">
+                Github
+              </a>
+            </li> */}
           </ul>
         </div>
       </div>
@@ -46,4 +108,4 @@ class Menu extends Component {
   }
 }
 
-export default Menu;
+export default withRouter(Menu);

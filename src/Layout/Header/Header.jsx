@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import './Header.scss';
 import Menu from '../Menu/Menu';
+import logo from '../../img/Logo_primary_thicc.svg';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
     return (
       <div className="header-container">
         <div className="header-brand">
-          <h1>Julie Norcross - 10/01</h1>
+          <Link to="/">
+            <img className="logo" src={logo} alt="" />
+          </Link>
+          <h1>
+            <Link to="/">Julie Norcross</Link>
+          </h1>
+          {/* <h2>Designer // Coder // Maker</h2> */}
         </div>
         <Menu />
       </div>

@@ -1,15 +1,16 @@
 @import '../Layout/variables.scss';
 
 .contact {
-  margin: 2rem 0;
-
   .form-group {
     position: relative;
 
     input,
     textarea {
+      font-size: 1rem;
+
       padding: 1rem;
       width: 100%;
+      // color: $primary-color;
       border: none;
       margin: 1rem 0;
       background: transparent;
@@ -25,40 +26,44 @@
       }
 
       &::placeholder {
-        font-size: 0.8rem;
+        // color: $primary-light-color;
+
+        font-size: 1rem;
         font-family: $primary-fonts;
       }
     }
     .underline {
       position: absolute;
       z-index: 2;
-      margin-top: -1.15rem;
+      margin-top: -1.1rem;
       height: 2px;
       width: 0;
-      background-color: #333;
-      -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
-      transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+      background-color: #000;
+      -webkit-transition: 0.5s all;
+      transition: 0.5s all;
     }
     textarea + .underline {
       margin-top: -1.3rem;
     }
   }
   form input[type='submit'] {
-    font-size: 0.8rem;
-    font-family: $primary-fonts;
-    color: rgb(143, 143, 143);
+    //   margin-top: 1rem;
+    //   font-size: 1rem;
+    //   font-weight: 900;
+    //   font-family: $primary-fonts;
+    //   color: $primary-color;
     width: 100%;
-    padding: 0.8rem 3rem;
-    border: 1px solid #ccc;
-    outline: none;
-    background: transparent;
-    font-family: $primary-fonts;
+    //   padding: 0.8rem 3rem;
+    //   border: 1px solid $primary-color;
+    //   outline: none;
+    //   background: transparent;
+    //   font-family: $primary-fonts;
 
-    &:hover {
-      cursor: pointer;
-      color: rgb(109, 109, 109);
-      border: 1px solid rgb(184, 184, 184);
-      background: rgba(0, 0, 0, 0.05);
-    }
+    //   &:hover {
+    //     cursor: pointer;
+    //     color: #fff;
+    //     border: 1px solid #fff;
+    //     background: $primary-color;
   }
+  // }
 }
