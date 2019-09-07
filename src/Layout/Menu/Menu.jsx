@@ -38,7 +38,6 @@ class Menu extends Component {
         <div className={menuOpen} />
         <div className="menu-links">
           <div className="menu-hamburger">
-            {/* <button className="menu-plus" onClick={() => this.toggleMenu()}> */}
             <svg
               width="25px"
               height="25px"
@@ -49,13 +48,6 @@ class Menu extends Component {
                 d="M14.47,0v10.48H25v4H14.47v10.48H10.5V14.48H0v-4h10.5V0H14.47z"
               />
             </svg>
-            {/* <object
-                onClick={() => this.toggleMenu()}
-                className="plus"
-                data={plus}
-                type="image/svg+xml"></object> */}
-            {/* <img src={plus} alt="" /> */}
-            {/* </button> */}
           </div>
           <ul>
             {this.props.pages.map(page => {
