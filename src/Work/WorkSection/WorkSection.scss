@@ -1,17 +1,17 @@
 .work {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   margin: 2rem 0;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 800px) {
   .work {
     grid-gap: 1rem;
   }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 650px) {
   .work {
     grid-template-columns: repeat(1, auto);
   }

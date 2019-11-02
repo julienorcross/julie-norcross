@@ -2,13 +2,14 @@ import React from 'react';
 import './About.scss';
 
 const About = () => (
-  <section id="about">
-    <div id="bio-image">
-      <div id="about-img">
-        {/* <img src={me} className="drop-shadow" alt="cute girl with glasses" /> */}
-      </div>
-      <div id="about-text">
-        <h2>Hey! I'm Julie.</h2>
+  <section className="About">
+    {/* <div id="bio-image">
+      <div id="about-img"> */}
+    {/* <img src={me} className="drop-shadow" alt="cute girl with glasses" /> */}
+    {/* </div> */}
+    <h2>Hey! I'm Julie.</h2>
+    <div className="about-text">
+      <div className="about-intro">
         <p>
           I discovered my love for design at age 11, when I first got my hands
           on PhotoShop (I used it to make sick signature graphics for
@@ -19,12 +20,31 @@ const About = () => (
           with a BA in graphic design, and continued to study code on my own.
         </p>
         <p>
-          My other hobbies include sewing my own clothes with environmentally
-          friendly fabrics, knitting, hangin' with my two cats, and crying at
+          Since 2016, I've been working at the John F. Kennedy Center for the
+          Performing Arts as a senior graphic designer. I am the head designer
+          for the Washington National Opera, and also create print and digital
+          collateral for comedy, jazz, and contemporary music performances.
+        </p>
+        <p>
+          Outside of work, you can find me sewing, hosting political debate
+          parties, weight lifting, taking yoga classes, listening to podcasts,
+          and crying at
           <span className="emphasize"> Planet Earth.</span>
         </p>
       </div>
+      <div className="about-skills">
+        <h3>Skills/Knowledge</h3>
+        <ul>
+          <li>Design</li>
+          <li>Adobe Creative Suite</li>
+          <li>HTML/CSS</li>
+          <li>Javascript (ES6)</li>
+          <li>React</li>
+          <li>SCSS</li>
+        </ul>
+      </div>
     </div>
+    {/* </div> */}
   </section>
 );
 

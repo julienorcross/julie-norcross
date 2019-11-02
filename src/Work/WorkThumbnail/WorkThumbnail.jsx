@@ -3,13 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './WorkThumbnail.scss';
 
-const WorkItem = ({ thumbnailPath, title, slug }) => (
+const WorkThumbnail = ({ thumbnailPath, alt, slug }) => (
   <div className="work-thumbnail">
     <Link to={`/work/${slug}`}>
-      <img className="work-thumbnail-image" alt={title} src={thumbnailPath} />
+      <img className="work-thumbnail-image" alt={alt} src={thumbnailPath} />
     </Link>
     {/* <WorkTitle title={title} slug={slug} /> */}
   </div>
 );
 
-export default WorkItem;
+export default WorkThumbnail;

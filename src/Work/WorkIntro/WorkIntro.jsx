@@ -9,7 +9,7 @@ class WorkIntro extends Component {
   render() {
     return (
       <div className="work-intro-wrapper">
-        <div className="work-intro-img" />
+        {this.props.item.pagePreview ? <div className="work-intro-img" /> : ''}
         <div className="work-intro-text">
           <h2>{this.props.item.title}</h2>
           <h3>{this.props.item.subtitle}</h3>

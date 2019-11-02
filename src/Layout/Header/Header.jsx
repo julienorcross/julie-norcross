@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 class Header extends Component {
   render() {
     return (
-      <div className="header-container">
+      <header className="header-container">
         <div className="header-brand">
           <Link to="/">
             <img className="logo" src={logo} alt="" />
@@ -18,7 +18,7 @@ class Header extends Component {
           {/* <h2>Designer // Coder // Maker</h2> */}
         </div>
         <Menu />
-      </div>
+      </header>
     );
   }
 }

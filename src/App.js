@@ -8,7 +8,6 @@ import About from './About/About';
 import Contact from './Contact/Contact';
 import WorkSection from './Work/WorkSection/WorkSection';
 import Footer from './Footer/Footer';
-import ImageShowcase from './Work/ImageShowcase/ImageShowcase';
 import WorkItem from './Work/WorkItem/WorkItem';
 
 function App() {

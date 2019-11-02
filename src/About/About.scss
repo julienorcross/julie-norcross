@@ -1,0 +1,32 @@
+.About {
+  .about-text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // gap: 1rem;
+  }
+
+  .about-intro {
+    grid-column: 1 / span 2;
+  }
+
+  .about-skills {
+    margin-left: 2rem;
+    // grid-column: span 1;
+    ul {
+      list-style-position: inside;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .About {
+    .about-intro {
+      grid-column: 1 / span 3;
+    }
+    .about-skills {
+      grid-column: 1 / span 3;
+      margin-top: 2rem;
+      margin-left: 0;
+    }
+  }
+}

@@ -9,7 +9,7 @@ const WorkSection = ({ items }) => {
         return (
           <WorkThumbnail
             key={currentItem.title}
-            title={currentItem.title}
+            alt={currentItem.thumbnailAlt}
             thumbnailPath={currentItem.thumbnailPath}
             mainImagePath={currentItem.mainImagePath}
             slug={currentItem.slug}

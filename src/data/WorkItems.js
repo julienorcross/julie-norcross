@@ -1,5 +1,4 @@
 import wno_preview from '../img/opera/preview.jpg';
-import wno_main from '../img/opera/opera_1.jpg';
 import wno_otello from '../img/opera/Otello.jpg';
 import wno_samsonDelilah from '../img/opera/SamsonDelilah.jpg';
 import wno_donGiovanni from '../img/opera/DonGiovanni.jpg';
@@ -19,7 +18,20 @@ import jazz_preview from '../img/jazz/preview.jpg';
 const workItems = [
   {
     thumbnailPath: wno_preview,
-    images: [wno_otello, wno_samsonDelilah, wno_donGiovanni],
+    thumgnailAlt:
+      'brochures for Washington National Opera laid out on a surface with a woman in a red dress on the cover',
+    pagePreview: true,
+    images: [
+      { path: wno_otello, alt: 'brochure layout featuring opera Otello' },
+      {
+        path: wno_samsonDelilah,
+        alt: 'brochure layout featuring opera Samson and Delilah'
+      },
+      {
+        path: wno_donGiovanni,
+        alt: 'brochure layout featuring opera Don Giovanni'
+      }
+    ],
     title: 'Washington National Opera',
     subtitle: '2019/2020 Subscriptions Brochure',
     slug: 'wno1920',
@@ -28,7 +40,26 @@ const workItems = [
   },
   {
     thumbnailPath: rcdc_preview,
-    images: [rcdc_home, rcdc_wfd, rcdc_list, rcdc_post],
+    thumbnailAlt:
+      'homepage for a website called Real Cooking DC featuring an image of someone cooking olives on a gas stove',
+    pagePreview: false,
+    images: [
+      {
+        path: rcdc_home,
+        alt:
+          'homepage for a website called Real Cooking DC featuring an image of someone cooking olives on a gas stove'
+      },
+      {
+        path: rcdc_wfd,
+        alt:
+          'screenshot of a website modal where you can input ingredients you have and it gives you recipes'
+      },
+      { path: rcdc_list, alt: 'screenshot of a cookng website listing page' },
+      {
+        path: rcdc_post,
+        alt: 'screenshot of a cooking website recipe for crab cakes'
+      }
+    ],
     title: 'Real Cooking DC',
     subtitle: 'Website Mockup',
     slug: 'rcdc',
@@ -40,7 +71,16 @@ const workItems = [
   },
   {
     thumbnailPath: jazz_preview,
-    images: [jazz_preview],
+    thumbnailAlt:
+      'designed spread of a jazz band playing with yellow accents and a quotation',
+    pagePreview: false,
+    images: [
+      {
+        path: jazz_preview,
+        alt:
+          'designed spread of a jazz band playing with yellow accents and a quotation'
+      }
+    ],
     title: 'Jazz Subscription Brochure',
     subtitle: '2017/2018 Season',
     slug: 'jazz-subs',
@@ -49,7 +89,17 @@ const workItems = [
   },
   {
     thumbnailPath: franz_preview,
-    images: [franz_home, franz_about],
+    thumbnailAlt:
+      "website homepage featuring an illustration of a man floating with the artist's name, Kevin Franz",
+    pagePreview: false,
+    images: [
+      {
+        path: franz_home,
+        alt:
+          "website homepage featuring an illustration of a man floating with the artist's name, Kevin Franz"
+      },
+      { path: franz_about, alt: 'website About page for artist Kevin Franz' }
+    ],
     title: 'Kevin Franz Website',
     subtitle: 'Website Mockup',
     slug: 'kevin-franz',
@@ -58,7 +108,15 @@ const workItems = [
   },
   {
     thumbnailPath: tbp_preview,
-    images: [tbp],
+    thumbnailAlt: 'a black, white, and red Maori-style design',
+    pagePreview: false,
+    images: [
+      {
+        path: tbp,
+        alt:
+          'book wrap design for The Bone People by Keri Hulme featuring a black, white, and red Maori-style design'
+      }
+    ],
     title: 'The Bone People',
     subtitle: 'Book Cover Design',
     slug: 'bone-people',

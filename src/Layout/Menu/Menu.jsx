@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import './Menu.scss';
-import plus from '../../img/plus_rev.svg';
 
 class Menu extends Component {
   constructor(props) {
@@ -20,7 +19,6 @@ class Menu extends Component {
 
   toggleMenu() {
     this.setState({ isOpen: !this.state.isOpen }, () => {
-      console.log(this.state.isOpen);
       if (this.state.isOpen) {
         document.body.style.overflow = 'hidden';
       } else {
@@ -51,22 +49,31 @@ class Menu extends Component {
           </div>
           <ul>
             {this.props.pages.map(page => {
-              console.log(page.path);
               const curr = `nav-link ${
                 this.props.location.pathname === page.path ? 'curr' : ''
               }`;
               if (page.title !== 'Github') {
                 return (
-                  <li>
-                    <Link to={page.path} className={curr}>
+                  <li key={page.path}>
+                    <Link
+                      to={page.path}
+                      className={curr}
+                      onClick={() => {
+                        this.setState({ isOpen: false });
+                        document.body.style.overflow = 'scroll';
+                      }}>
                       {page.title}
                     </Link>
                   </li>
                 );
               } else {
                 return (
-                  <li>
-                    <a href={page.path} target="_blank" className={curr}>
+                  <li key={page.path}>
+                    <a
+                      href={page.path}
+                      target="_blank"
+                      className={curr}
+                      rel="noopener noreferrer">
                       Github
                     </a>
                   </li>

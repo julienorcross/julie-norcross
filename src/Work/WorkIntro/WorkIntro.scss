@@ -3,11 +3,12 @@
 .work-intro-wrapper {
   margin: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 1fr min-content;
   grid-gap: 2rem;
 
   h2 {
     font-size: 3rem;
+    line-height: 3rem;
     margin-bottom: 1rem;
   }
 
@@ -19,14 +20,14 @@
   }
 
   .work-intro-img {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 1;
     background: url('../../img/opera/opera_1.jpg') no-repeat center center/cover;
     width: 100%;
     height: 80vh;
   }
 
   .work-intro-text {
-    grid-column: 4 / span 3;
+    grid-column-end: auto;
   }
 
   .work-intro-showcase {
@@ -34,10 +35,11 @@
   }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
   .work-intro-wrapper {
     .work-intro-img {
       grid-column: 1 / span 6;
+      height: 50vh;
     }
     .work-intro-text {
       grid-column: 1 / span 6;

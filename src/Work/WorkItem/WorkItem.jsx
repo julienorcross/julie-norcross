@@ -4,8 +4,6 @@ import WorkIntro from '../WorkIntro/WorkIntro';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
-let width = 0;
-
 class WorkItem extends Component {
   constructor(props) {
     super(props);
@@ -46,13 +44,14 @@ class WorkItem extends Component {
       <div className="work-item-wrapper">
         <WorkIntro item={item} />
         <Carousel showStatus={false} showArrows={false} showIndicators={false}>
-          {item.images.map(imgPath => {
+          {item.images.map(img => {
             return (
               <div
+                key={img.path}
                 className="custom-slide"
                 ref={this.myInput}
                 style={{ height }}>
-                <img src={imgPath} />
+                <img src={img.path} alt={img.alt} />
               </div>
             );
           })}
