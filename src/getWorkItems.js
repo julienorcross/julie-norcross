@@ -1,5 +1,5 @@
 const URL_WORKITEMS =
-  'https://julnor15.dreamhosters.com/backend/wp-json/wp/v2/workitems';
+  'https://backend.julienorcross.com/wp-json/wp/v2/workitems';
 
 async function getWorkItems() {
   const response = await fetch(URL_WORKITEMS);
@@ -28,4 +28,4 @@ async function getWorkItems() {
     .sort((a, b) => a.sortOrder - b.sortOrder);
 }
 
-export { getWorkItems };
+export default getWorkItems;

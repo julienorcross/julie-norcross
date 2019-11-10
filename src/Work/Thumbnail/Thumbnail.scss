@@ -1,0 +1,13 @@
+@import '../../Layout/variables.scss';
+
+.work-thumbnail {
+  cursor: pointer;
+  opacity: 1;
+  .work-thumbnail-image {
+    object-fit: cover;
+    // width: 100%;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
