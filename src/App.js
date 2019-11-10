@@ -36,16 +36,17 @@ class App extends Component {
           <Route path="/contact" component={Contact} />
           <Route
             path="/work/:workSlug"
-            component={props => (
-              <WorkItem
-                // items={workItems.filter(
-                //   item => `/work/${item.slug}` === this.props.to
-                // )}
-                // {...props}
-                items={workItems}
-                {...props}
-              />
-            )}
+            component={props => {
+              const slug = props.match.params.workSlug;
+              return (
+                <WorkItem
+                  item={workItems.find(item => item.slug === slug)}
+                  {...props}
+                  // items={workItems}
+                  // {...props}
+                />
+              );
+            }}
           />
           <Footer></Footer>
         </div>

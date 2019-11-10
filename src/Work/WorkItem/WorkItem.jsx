@@ -38,9 +38,10 @@ class WorkItem extends Component {
   };
 
   render() {
-    console.log(this.props.items);
-    const item = this.props.items.find(this.findItem);
-    console.log(item);
+    console.log(this.props.item);
+    // const item = this.props.items.find(this.findItem);
+    // console.log(item);
+    const { item } = this.props;
     const height = '500px';
     // const height = this.calculateImageHeight(item);
     return (
