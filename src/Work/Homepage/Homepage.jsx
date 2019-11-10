@@ -3,7 +3,6 @@ import Thumbnail from '../Thumbnail/Thumbnail';
 import './Homepage.scss';
 
 const Homepage = ({ items }) => {
-  console.log(items);
   return (
     <div className="work">
       {items.map(function(currentItem) {

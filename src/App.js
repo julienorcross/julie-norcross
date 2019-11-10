@@ -17,12 +17,12 @@ class App extends Component {
   async componentDidMount() {
     getWorkItems().then(workItems => {
       this.setState({ workItems });
-      console.log(workItems);
     });
   }
 
   render() {
     const { workItems } = this.state;
+    console.log(workItems);
     return (
       <BrowserRouter>
         <div className="container">
@@ -36,7 +36,16 @@ class App extends Component {
           <Route path="/contact" component={Contact} />
           <Route
             path="/work/:workSlug"
-            component={props => <WorkItem items={workItems} {...props} />}
+            component={props => (
+              <WorkItem
+                // items={workItems.filter(
+                //   item => `/work/${item.slug}` === this.props.to
+                // )}
+                // {...props}
+                items={workItems}
+                {...props}
+              />
+            )}
           />
           <Footer></Footer>
         </div>

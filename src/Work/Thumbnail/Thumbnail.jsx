@@ -6,7 +6,11 @@ import './Thumbnail.scss';
 const Thumbnail = ({ featuredImage, alt, slug }) => (
   <div className="work-thumbnail">
     <Link to={`/work/${slug}`}>
-      <img className="work-thumbnail-image" alt={alt} src={featuredImage} />
+      <div
+        className="work-thumbnail-image"
+        alt={alt}
+        style={{ backgroundImage: `url(${featuredImage})` }}
+      />
     </Link>
     {/* <WorkTitle title={title} slug={slug} /> */}
   </div>

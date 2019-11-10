@@ -38,20 +38,23 @@ class WorkItem extends Component {
   };
 
   render() {
+    console.log(this.props.items);
     const item = this.props.items.find(this.findItem);
-    const height = this.calculateImageHeight(item);
+    console.log(item);
+    const height = '500px';
+    // const height = this.calculateImageHeight(item);
     return (
       <div className="work-item-wrapper">
         <WorkIntro item={item} />
         <Carousel showStatus={false} showArrows={false} showIndicators={false}>
-          {item.images.map(img => {
+          {item.slideshow.map(img => {
             return (
               <div
-                key={img.path}
+                key={img.url}
                 className="custom-slide"
                 ref={this.myInput}
                 style={{ height }}>
-                <img src={img.path} alt={img.alt} />
+                <img src={img.url} alt={img.alt} />
               </div>
             );
           })}
