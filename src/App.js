@@ -12,42 +12,51 @@ import WorkItem from './Work/WorkItem/WorkItem';
 import getWorkItems from './getWorkItems';
 
 class App extends Component {
-  state = { workItems: [] };
+  state = { workItems: [], isLoading: true };
 
   async componentDidMount() {
-    getWorkItems().then(workItems => {
-      this.setState({ workItems });
-    });
+    const workItems = await getWorkItems();
+    this.setState({ workItems, isLoading: false });
+  }
+
+  renderRoutes() {
+    const { workItems } = this.state;
+
+    return (
+      <>
+        <Route
+          path="/"
+          exact
+          component={() => <Homepage items={workItems} />}
+        />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route
+          path="/work/:workSlug"
+          component={props => {
+            const slug = props.match.params.workSlug;
+            return (
+              <WorkItem
+                item={workItems.find(item => item.slug === slug)}
+                {...props}
+                // items={workItems}
+                // {...props}
+              />
+            );
+          }}
+        />
+      </>
+    );
   }
 
   render() {
-    const { workItems } = this.state;
-    console.log(workItems);
+    const { isLoading } = this.state;
+
     return (
       <BrowserRouter>
         <div className="container">
           <Header />
-          <Route
-            path="/"
-            exact
-            component={() => <Homepage items={workItems} />}
-          />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route
-            path="/work/:workSlug"
-            component={props => {
-              const slug = props.match.params.workSlug;
-              return (
-                <WorkItem
-                  item={workItems.find(item => item.slug === slug)}
-                  {...props}
-                  // items={workItems}
-                  // {...props}
-                />
-              );
-            }}
-          />
+          {isLoading ? <div>Loading Spinner here...</div> : this.renderRoutes()}
           <Footer></Footer>
         </div>
       </BrowserRouter>
