@@ -5,7 +5,6 @@ import './Menu.scss';
 class Menu extends Component {
   constructor(props) {
     super(props);
-    this.state = { isOpen: false };
   }
 
   static defaultProps = {
@@ -17,19 +16,19 @@ class Menu extends Component {
     ]
   };
 
-  toggleMenu() {
-    this.setState({ isOpen: !this.state.isOpen }, () => {
-      if (this.state.isOpen) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'scroll';
-      }
-    });
-  }
+  // toggleMenu() {
+  //   this.setState({ isOpen: !this.state.isOpen }, () => {
+  //     if (this.state.isOpen) {
+  //       document.body.style.overflow = 'hidden';
+  //     } else {
+  //       document.body.style.overflow = 'scroll';
+  //     }
+  //   });
+  // }
 
   render() {
     const menuOpen = `menu-overlay ${
-      this.state.isOpen ? ' menuOpen' : 'menuClosed'
+      this.props.isOpen ? ' menuOpen' : 'menuClosed'
     }`;
     return (
       <div className="menu-wrapper">
@@ -40,7 +39,7 @@ class Menu extends Component {
               width="25px"
               height="25px"
               className="plus-svg"
-              onClick={() => this.toggleMenu()}>
+              onClick={() => this.props.handleToggle()}>
               <path
                 className="plus-path"
                 d="M14.47,0v10.48H25v4H14.47v10.48H10.5V14.48H0v-4h10.5V0H14.47z"
@@ -58,10 +57,11 @@ class Menu extends Component {
                     <Link
                       to={page.path}
                       className={curr}
-                      onClick={() => {
-                        this.setState({ isOpen: false });
-                        document.body.style.overflow = 'scroll';
-                      }}>
+                      // onClick={() => {
+                      //   this.setState({ isOpen: false });
+                      //   document.body.style.overflow = 'scroll';
+                      // }}
+                    >
                       {page.title}
                     </Link>
                   </li>
@@ -74,7 +74,7 @@ class Menu extends Component {
                       target="_blank"
                       className={curr}
                       rel="noopener noreferrer">
-                      Github
+                      Github <i className="fas fa-external-link-alt"></i>
                     </a>
                   </li>
                 );
