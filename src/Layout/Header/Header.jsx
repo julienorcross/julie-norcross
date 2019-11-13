@@ -5,24 +5,7 @@ import logo from '../../img/Logo_primary_thicc.svg';
 import { Link } from 'react-router-dom';
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isOpen: false };
-    this.toggleMenu = this.toggleMenu.bind(this);
-  }
-
-  toggleMenu() {
-    this.setState({ isOpen: !this.state.isOpen }, () => {
-      if (this.state.isOpen) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'scroll';
-      }
-    });
-  }
-
   render() {
-    const menuClass = 'Menu ' + this.state.isOpen ? 'menu-open' : '';
     return (
       <header className="header-container">
         <div className="header-brand">
@@ -34,11 +17,7 @@ class Header extends Component {
           </h1>
           {/* <h2>Designer // Coder // Maker</h2> */}
         </div>
-        <Menu
-          className={menuClass}
-          isOpen={this.state.isOpen}
-          handleToggle={this.toggleMenu}
-        />
+        <Menu />
       </header>
     );
   }

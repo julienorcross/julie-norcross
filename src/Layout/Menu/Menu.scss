@@ -9,9 +9,9 @@ button:focus {
 }
 
 .menu-wrapper {
-  // align-self: baseline;
+  align-self: baseline;
   display: flex;
-  // align-items: center;
+  align-items: center;
   z-index: 2;
   ul {
     list-style: none;
@@ -28,12 +28,12 @@ button:focus {
       font-weight: 900;
 
       li {
-        // width: 350px;
+        width: 350px;
         margin-bottom: 1rem;
 
         .nav-link,
         .curr {
-          // padding: 0.4rem 0.8rem;
+          padding: 0.4rem 0.8rem;
           &:after {
             content: '';
             position: absolute;
