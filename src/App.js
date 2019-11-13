@@ -12,51 +12,42 @@ import WorkItem from './Work/WorkItem/WorkItem';
 import getWorkItems from './getWorkItems';
 
 class App extends Component {
-  state = { workItems: [], isLoading: true };
+  state = { workItems: [] };
 
   async componentDidMount() {
-    const workItems = await getWorkItems();
-    this.setState({ workItems, isLoading: false });
-  }
-
-  renderRoutes() {
-    const { workItems } = this.state;
-
-    return (
-      <>
-        <Route
-          path="/"
-          exact
-          component={() => <Homepage items={workItems} />}
-        />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route
-          path="/work/:workSlug"
-          component={props => {
-            const slug = props.match.params.workSlug;
-            return (
-              <WorkItem
-                item={workItems.find(item => item.slug === slug)}
-                {...props}
-                // items={workItems}
-                // {...props}
-              />
-            );
-          }}
-        />
-      </>
-    );
+    getWorkItems().then(workItems => {
+      this.setState({ workItems });
+    });
   }
 
   render() {
-    const { isLoading } = this.state;
-
+    const { workItems } = this.state;
+    console.log(workItems);
     return (
       <BrowserRouter>
         <div className="container">
           <Header />
-          {isLoading ? <div>Loading Spinner here...</div> : this.renderRoutes()}
+          <Route
+            path="/"
+            exact
+            component={() => <Homepage items={workItems} />}
+          />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route
+            path="/work/:workSlug"
+            component={props => {
+              const slug = props.match.params.workSlug;
+              return (
+                <WorkItem
+                  item={workItems.find(item => item.slug === slug)}
+                  {...props}
+                  // items={workItems}
+                  // {...props}
+                />
+              );
+            }}
+          />
           <Footer></Footer>
         </div>
       </BrowserRouter>
