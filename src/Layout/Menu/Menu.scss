@@ -186,6 +186,9 @@
           .curr {
             color: white;
             background: $primary-color;
+            &:hover {
+              background: $primary-color;
+            }
           }
           .nav-link,
           .curr {

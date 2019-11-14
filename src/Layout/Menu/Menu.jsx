@@ -3,6 +3,11 @@ import { Link, withRouter } from "react-router-dom";
 import "./Menu.scss";
 
 class Menu extends Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   static defaultProps = {
     pages: [
       { title: "Home", path: "/" },
@@ -11,6 +16,10 @@ class Menu extends Component {
       { title: "Github", path: "https://github.com/julienorcross" }
     ]
   };
+
+  handleClick() {
+    document.querySelector(".toggler").checked = false;
+  }
 
   render() {
     return (
@@ -31,7 +40,11 @@ class Menu extends Component {
                   if (page.title !== "Github") {
                     return (
                       <li key={page.path}>
-                        <Link to={page.path} className={curr}>
+                        <Link
+                          to={page.path}
+                          className={curr}
+                          onClick={this.handleClick}
+                        >
                           {page.title}
                         </Link>
                       </li>

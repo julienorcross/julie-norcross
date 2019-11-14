@@ -1,16 +1,42 @@
+@import "../Layout/variables.scss";
+
 .About {
+  .bio-image {
+    float: right;
+    margin: 1rem 0 1rem 1.5rem;
+    width: 300px;
+    background: $primary-color;
+    border-radius: 0.2rem;
+
+    img {
+      border-top-left-radius: 0.2rem;
+      border-top-right-radius: 0.2rem;
+      width: 100%;
+    }
+    .bio-image-caption {
+      padding: 0.4rem 0.4rem 0.6rem 0.4rem;
+      color: #fff;
+      text-align: center;
+      font-family: $secondary-fonts;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+
   .about-text {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
     // gap: 1rem;
   }
 
   .about-intro {
-    grid-column: 1 / span 2;
+    // grid-column: 1 / span 2;
   }
 
   .about-skills {
-    margin-left: 2rem;
+    margin-top: 2rem;
+    // margin-left: 2rem;
     // grid-column: span 1;
     ul {
       list-style-position: inside;
@@ -20,6 +46,11 @@
 
 @media (max-width: 600px) {
   .About {
+    .bio-image {
+      width: 100%;
+      float: none;
+      margin: 0 auto 1.5rem auto;
+    }
     .about-intro {
       grid-column: 1 / span 3;
     }

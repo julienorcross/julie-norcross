@@ -1,4 +1,4 @@
-@import './Layout/variables.scss';
+@import "./Layout/variables.scss";
 
 * {
   box-sizing: border-box;
@@ -52,7 +52,7 @@ a {
 }
 
 button,
-form input[type='submit'] {
+form input[type="submit"] {
   outline: none;
   border: none;
   cursor: pointer;
@@ -61,10 +61,19 @@ form input[type='submit'] {
   font-family: $primary-fonts;
   font-weight: 700;
   font-size: 1rem;
-  padding: 0.6rem 4rem;
+  padding: 0.8rem 4rem;
   border-radius: 0.2rem;
 
   &:hover {
     background-color: $primary-dark-color;
+  }
+}
+
+@media (max-width: 500px) {
+  button,
+  form input[type="submit"] {
+    padding: 1.2rem 1rem;
+    width: 100%;
+    font-size: 1.2rem;
   }
 }

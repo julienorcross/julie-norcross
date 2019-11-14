@@ -1,12 +1,13 @@
-import React from 'react';
-import './About.scss';
+import React from "react";
+import "./About.scss";
+import me from "../img/charlieandme_sq.jpg";
 
 const About = () => (
   <section className="About">
-    {/* <div id="bio-image">
-      <div id="about-img"> */}
-    {/* <img src={me} className="drop-shadow" alt="cute girl with glasses" /> */}
-    {/* </div> */}
+    <div className="bio-image">
+      <img src={me} alt="cute girl with glasses" />
+      <p className="bio-image-caption">Me (left) and Charlie (right)</p>
+    </div>
     <h2>Hey! I'm Julie.</h2>
     <div className="about-text">
       <div className="about-intro">
@@ -44,7 +45,6 @@ const About = () => (
         </ul>
       </div>
     </div>
-    {/* </div> */}
   </section>
 );
 
