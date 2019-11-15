@@ -9,6 +9,7 @@ import Contact from './Contact/Contact';
 import Homepage from './Work/Homepage/Homepage';
 import Footer from './Footer/Footer';
 import WorkItem from './Work/WorkItem/WorkItem';
+import Spinner from './Spinner/Spinner';
 import getWorkItems from './getWorkItems';
 
 class App extends Component {
@@ -56,7 +57,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="container">
           <Header />
-          {isLoading ? <div>Loading Spinner here...</div> : this.renderRoutes()}
+          {isLoading ? <Spinner></Spinner> : this.renderRoutes()}
           <Footer></Footer>
         </div>
       </BrowserRouter>

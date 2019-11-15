@@ -24,6 +24,10 @@ class Menu extends Component {
     ]
   };
 
+  componentWillUnmount() {
+    clearAllBodyScrollLocks();
+  }
+
   handleClick() {
     this.setState({ isOpen: false });
     enableBodyScroll();
