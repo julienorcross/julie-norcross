@@ -1,5 +1,8 @@
-@import "../../Layout/variables.scss";
+@import '../../Layout/variables.scss';
 
+// body {
+//   overflow: hidden;
+// }
 .menu-wrapper {
   width: 100%;
   height: 3px;
@@ -46,7 +49,7 @@
         .nav-link,
         .curr {
           &:after {
-            content: "";
+            content: '';
             position: absolute;
             height: 8px;
             background-color: #fff;
@@ -84,6 +87,7 @@
       & ~ .menu-overlay {
         transition: 0.4s ease width;
         width: 100%;
+        overflow: hidden;
       }
       & ~ .menu-links {
         transition: opacity 0.4s ease 0.3s;
@@ -135,7 +139,7 @@
       &:before,
       &:after {
         transition: 0.4s ease transform;
-        content: "";
+        content: '';
         position: absolute;
         z-index: 1;
         width: 100%;

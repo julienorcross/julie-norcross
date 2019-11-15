@@ -8,10 +8,23 @@
     background: $primary-color;
     border-radius: 0.2rem;
 
-    img {
+    .bio-image-container {
+      background: url("../img/charlieandme_sq.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       border-top-left-radius: 0.2rem;
       border-top-right-radius: 0.2rem;
       width: 100%;
+      height: 300px;
+      transition: background 0.2s ease-in-out;
+
+      &:hover {
+        background: url("../img/charlieandme_2_sq.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
     }
     .bio-image-caption {
       padding: 0.4rem 0.4rem 0.6rem 0.4rem;

@@ -5,7 +5,7 @@ import me from "../img/charlieandme_sq.jpg";
 const About = () => (
   <section className="About">
     <div className="bio-image">
-      <img src={me} alt="cute girl with glasses" />
+      <div className="bio-image-container" />
       <p className="bio-image-caption">Me (left) and Charlie (right)</p>
     </div>
     <h2>Hey! I'm Julie.</h2>
