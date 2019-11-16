@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 // import workItems from '../src/data/WorkItems.js';
 
 import './App.scss';
@@ -8,6 +8,7 @@ import About from './About/About';
 import Contact from './Contact/Contact';
 import Homepage from './Work/Homepage/Homepage';
 import Footer from './Footer/Footer';
+import NotFound from './NotFound/NotFound';
 import WorkItem from './Work/WorkItem/WorkItem';
 import Spinner from './Spinner/Spinner';
 import getWorkItems from './getWorkItems';
@@ -24,7 +25,7 @@ class App extends Component {
     const { workItems } = this.state;
 
     return (
-      <>
+      <Switch>
         <Route
           path="/"
           exact
@@ -46,7 +47,9 @@ class App extends Component {
             );
           }}
         />
-      </>
+        <Route path="/404" component={NotFound} />
+        <Redirect to="/404" />
+      </Switch>
     );
   }
 

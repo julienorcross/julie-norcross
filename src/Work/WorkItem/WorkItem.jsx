@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+
 import './WorkItem.scss';
 import WorkIntro from '../WorkIntro/WorkIntro';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -42,6 +44,9 @@ class WorkItem extends Component {
     // const item = this.props.items.find(this.findItem);
     // console.log(item);
     const { item } = this.props;
+    if (!item) {
+      return <Redirect to="/404" />;
+    }
     const height = '500px';
     // const height = this.calculateImageHeight(item);
     return (
