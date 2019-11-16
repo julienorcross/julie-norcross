@@ -21,10 +21,7 @@
     transition: 0.4s ease width;
   }
   .menu-links {
-    font-family: $primary-fonts;
-    font-weight: 900;
-    font-size: 5rem;
-    line-height: 7rem;
+    width: 100%;
     position: fixed;
     top: 0;
     right: 0;
@@ -37,6 +34,9 @@
     justify-content: center;
     ul {
       z-index: 3;
+      font-family: $primary-fonts;
+      font-weight: 900;
+      font-size: 5rem;
       li {
         text-align: center;
         list-style: none;
@@ -164,6 +164,8 @@
       display: none;
     }
     .menu-links {
+      top: 0;
+      right: 0;
       opacity: 1;
       visibility: visible;
       position: absolute;

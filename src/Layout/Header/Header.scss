@@ -39,3 +39,18 @@
     }
   }
 }
+
+@media (max-width: 350px) {
+  .header-container {
+    .header-brand {
+      .logo {
+        margin-top: 0.2rem;
+        height: 50px;
+      }
+      h1 {
+        font-size: 2rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+}

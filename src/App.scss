@@ -1,4 +1,4 @@
-@import "./Layout/variables.scss";
+@import './Layout/variables.scss';
 
 * {
   box-sizing: border-box;
@@ -52,7 +52,7 @@ a {
 }
 
 button,
-form input[type="submit"] {
+form input[type='submit'] {
   outline: none;
   border: none;
   cursor: pointer;
@@ -71,7 +71,7 @@ form input[type="submit"] {
 
 @media (max-width: 500px) {
   button,
-  form input[type="submit"] {
+  form input[type='submit'] {
     padding: 1.2rem 1rem;
     width: 100%;
     font-size: 1.2rem;
