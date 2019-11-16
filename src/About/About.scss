@@ -1,4 +1,4 @@
-@import "../Layout/variables.scss";
+@import '../Layout/variables.scss';
 
 .About {
   .bio-image {
@@ -9,7 +9,7 @@
     border-radius: 0.2rem;
 
     .bio-image-container {
-      background: url("../img/charlieandme_sq.jpg");
+      background: url('../img/charlieandme_sq.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -20,7 +20,7 @@
       transition: background 0.2s ease-in-out;
 
       &:hover {
-        background: url("../img/charlieandme_2_sq.jpg");
+        background: url('../img/charlieandme_2_sq.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -30,7 +30,7 @@
       padding: 0.4rem 0.4rem 0.6rem 0.4rem;
       color: #fff;
       text-align: center;
-      font-family: $secondary-fonts;
+      // font-family: $secondary-fonts;
       font-size: 0.7rem;
       font-weight: 700;
       margin: 0;

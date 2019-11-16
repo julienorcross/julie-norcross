@@ -7,11 +7,11 @@
   position: relative;
   margin-bottom: 3rem;
   .header-brand {
-    // align-self: baseline;
     display: grid;
     width: 10rem;
     grid-template-columns: repeat(3, 1fr);
     .logo {
+      margin-top: 0.1rem;
       cursor: pointer;
       grid-column: 1 / span 1;
       height: 60px;
@@ -27,16 +27,6 @@
         color: #000;
       }
     }
-    h2 {
-      margin-top: 1rem;
-      grid-column: 1 / span 3;
-      font-family: $secondary-fonts;
-      font-weight: 900;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      color: #000;
-    }
   }
 }
 
@@ -44,7 +34,6 @@
   .header-container {
     .header-brand {
       .logo {
-        margin-top: 0.2rem;
         height: 50px;
       }
       h1 {
