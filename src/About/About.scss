@@ -9,7 +9,7 @@
     border-radius: 0.2rem;
 
     .bio-image-container {
-      background: url('../img/charlieandme_sq.jpg');
+      background: url('../img/charlieandme.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -19,7 +19,7 @@
       transition: background 0.2s ease-in-out;
 
       &:hover {
-        background: url('../img/charlieandme_2_sq.jpg');
+        background: url('../img/charlieandme_2.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
