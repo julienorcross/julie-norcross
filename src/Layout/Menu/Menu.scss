@@ -8,7 +8,8 @@
   height: 3px;
   justify-content: flex-end;
   align-items: flex-end;
-  z-index: 2;
+  z-index: 0;
+  // position: absolute;
   .menu-overlay {
     position: fixed;
     // opacity: 0.5;
@@ -164,6 +165,7 @@
       display: none;
     }
     .menu-links {
+      width: auto;
       top: 0;
       right: 0;
       opacity: 1;

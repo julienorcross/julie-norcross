@@ -1,23 +1,9 @@
 @import '../../Layout/variables.scss';
 
 .work-intro-wrapper {
-  margin: 2rem 0;
   display: grid;
   grid-template-columns: 1fr min-content;
   grid-gap: 2rem;
-
-  h2 {
-    font-size: 3rem;
-    line-height: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  h3 {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 0.8rem;
-  }
 
   .work-intro-img {
     grid-column: 1 / span 2;
@@ -27,11 +13,20 @@
   }
 
   .work-intro-text {
+    margin: 1rem 0;
     grid-column-end: auto;
-  }
-
-  .work-intro-showcase {
-    grid-column: 1 / 6;
+    .work-intro-title {
+      font-size: 3rem;
+      line-height: 3rem;
+      margin-bottom: 1rem;
+    }
+    .work-intro-subtitle {
+      font-family: $secondary-fonts;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 0.8rem;
+    }
   }
 }
 

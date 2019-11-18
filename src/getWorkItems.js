@@ -7,9 +7,16 @@ async function getWorkItems() {
   return json
     .map(wordpressModel => {
       const { acf, title, slug } = wordpressModel;
-      const { sort_order, description, featured_image, slideshow } = acf;
+      const {
+        sort_order,
+        subtitle,
+        description,
+        featured_image,
+        slideshow
+      } = acf;
       return {
         title: title.rendered,
+        subtitle: subtitle,
         slug,
         sortOrder: parseInt(sort_order),
         description,

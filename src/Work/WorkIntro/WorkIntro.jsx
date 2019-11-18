@@ -16,8 +16,8 @@ class WorkIntro extends Component {
           }}
         />
         <div className="work-intro-text">
-          <h2>{this.props.item.title}</h2>
-          <h3>{this.props.item.subtitle}</h3>
+          <h2 className="work-intro-title">{this.props.item.title}</h2>
+          <h3 className="work-intro-subtitle">// {this.props.item.subtitle}</h3>
           <div className="description">
             <div dangerouslySetInnerHTML={this.createMarkup()} />
           </div>
