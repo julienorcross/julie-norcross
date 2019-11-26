@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import {
   disableBodyScroll,
@@ -8,94 +8,84 @@ import {
 
 import './Menu.scss';
 
-class Menu extends Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.state = { isOpen: false };
-  }
+const Menu = ({ location }) => {
+  useEffect(() => () => clearAllBodyScrollLocks(), []);
 
-  static defaultProps = {
-    pages: [
-      { title: 'Home', path: '/' },
-      { title: 'About', path: '/about' },
-      { title: 'Contact', path: '/contact' },
-      { title: 'Github', path: 'https://github.com/julienorcross' }
-    ]
+  const [isOpen, setIsOpen] = useState(false);
+
+  const pages = [
+    { title: 'Home', path: '/' },
+    { title: 'About', path: '/about' },
+    { title: 'Contact', path: '/contact' },
+    { title: 'Github', path: 'https://github.com/julienorcross' }
+  ];
+
+  const handleClick = () => {
+    setIsOpen(false);
+    enableBodyScroll();
   };
 
-  componentWillUnmount() {
-    clearAllBodyScrollLocks();
-  }
-
-  handleClick() {
-    this.setState({ isOpen: false });
-    enableBodyScroll();
-  }
-
-  handleChange = () => {
-    if (this.state.isOpen) {
+  const handleChange = () => {
+    if (isOpen) {
       enableBodyScroll();
-      this.setState({ isOpen: false });
+      setIsOpen(false);
     } else {
       disableBodyScroll();
-      this.setState({ isOpen: true });
+      setIsOpen(true);
     }
   };
 
-  render() {
-    return (
-      <div className="menu-wrapper">
-        <input
-          type="checkbox"
-          className="toggler"
-          checked={this.state.isOpen}
-          onChange={this.handleChange}
-        />
-        <div className="menu-hamburger">
-          <div></div>
-        </div>
-        <div className="menu-overlay"></div>
-        <div className="menu-links">
+  return (
+    <div className="menu-wrapper">
+      <input
+        type="checkbox"
+        className="toggler"
+        checked={isOpen}
+        onChange={handleChange}
+      />
+      <div className="menu-hamburger">
+        <div></div>
+      </div>
+      <div className="menu-overlay"></div>
+      <div className="menu-links">
+        <div>
           <div>
-            <div>
-              <ul>
-                {this.props.pages.map(page => {
-                  const curr = `nav-link ${
-                    this.props.location.pathname === page.path ? 'curr' : ''
-                  }`;
-                  if (page.title !== 'Github') {
-                    return (
-                      <li key={page.path}>
-                        <Link
-                          to={page.path}
-                          className={curr}
-                          onClick={this.handleClick}>
-                          {page.title}
-                        </Link>
-                      </li>
-                    );
-                  } else {
-                    return (
-                      <li key={page.path}>
-                        <a
-                          href={page.path}
-                          target="_blank"
-                          className={curr}
-                          rel="noopener noreferrer">
-                          Github <i className="fas fa-external-link-alt"></i>
-                        </a>
-                      </li>
-                    );
-                  }
-                })}
-              </ul>
-            </div>
+            <ul>
+              {pages.map(page => {
+                const curr = `nav-link ${
+                  location.pathname === page.path ? 'curr' : ''
+                }`;
+                if (page.title !== 'Github') {
+                  return (
+                    <li key={page.path}>
+                      <Link
+                        to={page.path}
+                        className={curr}
+                        onClick={handleClick}>
+                        {page.title}
+                      </Link>
+                    </li>
+                  );
+                } else {
+                  return (
+                    <li key={page.path}>
+                      <a
+                        href={page.path}
+                        target="_blank"
+                        className={curr}
+                        rel="noopener noreferrer">
+                        Github <i className="fas fa-external-link-alt"></i>
+                      </a>
+                    </li>
+                  );
+                }
+              })}
+            </ul>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default withRouter(Menu);
