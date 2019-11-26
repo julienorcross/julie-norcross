@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import './Contact.scss';
+import sendEmail from './sendEmail';
 
 const Contact = () => {
   const [success, setSuccess] = useState(null);
@@ -7,11 +9,19 @@ const Contact = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // fetch('https://julienorcross.com/contact.php', { method: 'POST' })
-    //   .then(res => res.text())
-    //   .then(text => console.log(text));
-    setSuccess(true);
-    // setError(true);
+    const msg = {
+      name: 'name',
+      subject: 'subject',
+      email: 'email',
+      message: 'message'
+    };
+    sendEmail(msg).then(res => {
+      setSuccess(res.success);
+      if (!res.success) {
+        setError(true);
+      }
+      console.log(res);
+    });
   }
 
   if (success) {
