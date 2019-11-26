@@ -7,14 +7,12 @@ import './Header.scss';
 
 const Header = () => (
   <header className="header-container">
-    <div className="header-brand">
-      <Link to="/">
-        <img className="logo" src={logo} alt="" />
-      </Link>
-      <h1>
-        <Link to="/">Julie Norcross</Link>
-      </h1>
-    </div>
+    {/* <div className="header-brand"> */}
+    <Link className="header-brand" to="/">
+      <img className="logo" src={logo} alt="" />
+      <h1>Julie Norcross</h1>
+    </Link>
+    {/* </div> */}
     <Menu className="Menu" />
   </header>
 );
