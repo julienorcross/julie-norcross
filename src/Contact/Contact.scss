@@ -1,11 +1,7 @@
 @import '../Layout/variables.scss';
 
 .contact {
-  // z-index: -2;
   .form-group {
-    // z-index: -1;
-    // position: relative;
-
     input,
     textarea {
       font-size: 1rem;
@@ -23,10 +19,6 @@
         color: black;
         border-bottom: 1px solid $primary-color;
       }
-
-      // &::placeholder {
-      //   // font-size: 1rem;
-      // }
     }
   }
   form input[type='submit'] {
