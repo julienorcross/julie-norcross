@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 // import workItems from '../src/data/WorkItems.js';
 
@@ -13,17 +13,21 @@ import WorkItem from './Work/WorkItem/WorkItem';
 import Spinner from './Spinner/Spinner';
 import getWorkItems from './getWorkItems';
 
-class App extends Component {
-  state = { workItems: [], isLoading: true };
+const App = () => {
+  // useState
+  const [workItems, setWorkItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  async componentDidMount() {
-    const workItems = await getWorkItems();
-    this.setState({ workItems, isLoading: false });
-  }
+  useEffect(() => {
+    async function fetchWorkItems() {
+      const workItems = await getWorkItems();
+      setWorkItems(workItems);
+      setIsLoading(false);
+    }
+    fetchWorkItems();
+  }, []);
 
-  renderRoutes() {
-    const { workItems } = this.state;
-
+  const renderRoutes = () => {
     return (
       <Switch>
         <Route
@@ -51,21 +55,17 @@ class App extends Component {
         <Redirect to="/404" />
       </Switch>
     );
-  }
+  };
 
-  render() {
-    const { isLoading } = this.state;
-
-    return (
-      <BrowserRouter>
-        <div className="container">
-          <Header />
-          {isLoading ? <Spinner></Spinner> : this.renderRoutes()}
-          <Footer></Footer>
-        </div>
-      </BrowserRouter>
-    );
-  }
-}
+  return (
+    <BrowserRouter>
+      <div className="container">
+        <Header />
+        {isLoading ? <Spinner></Spinner> : renderRoutes()}
+        <Footer></Footer>
+      </div>
+    </BrowserRouter>
+  );
+};
 
 export default App;
