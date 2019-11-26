@@ -65,7 +65,6 @@ class WorkItem extends Component {
             );
           })}
         </Carousel>
-        {/* <ImageShowcase imgs={item.images} /> */}
       </div>
     );
   }
