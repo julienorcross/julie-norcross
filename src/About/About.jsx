@@ -8,7 +8,7 @@ const About = () => (
       <div className="bio-image-container" />
       <p className="bio-image-caption">Me (left) and Charlie (right)</p>
     </div>
-    <h2>Hey! I'm Julie.</h2>
+    <h2>Hey! I'm Julie. TEST GITHUB ACTIONS</h2>
     <div className="about-text">
       <div className="about-intro">
         <p>
