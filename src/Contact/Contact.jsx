@@ -6,23 +6,32 @@ import sendEmail from './sendEmail';
 const Contact = () => {
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
+  const [message, setMessage] = useState({});
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const msg = {
-      name: 'name',
-      subject: 'subject',
-      email: 'email',
-      message: 'message'
-    };
-    sendEmail(msg).then(res => {
-      setSuccess(res.success);
-      if (!res.success) {
-        setError(true);
-      }
-      console.log(res);
+  const handleChange = e => {
+    const target = e.target;
+    const value = target.value;
+    const name = target.name;
+
+    setMessage({
+      ...message,
+      [name]: value
     });
-  }
+  };
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    try {
+      await sendEmail(message).then(res => {
+        setSuccess(res.success);
+        if (!res.success) {
+          setError(true);
+        }
+      });
+    } catch (e) {
+      setError(true);
+    }
+  };
 
   if (success) {
     return (
@@ -45,25 +54,31 @@ const Contact = () => {
       <p>I'm all ears.</p>
       <form name="contact" onSubmit={handleSubmit}>
         <div className="form-group">
-          {/* <label htmlFor="name">Name</label> */}
-          <input type="text" id="name" name="name" placeholder="Name" />
-        </div>
-        <div className="form-group">
-          {/* <label htmlFor="email">Email</label> */}
-          <input type="email" id="email" name="email" placeholder="Email" />
-        </div>
-        <div className="form-group">
-          {/* <label htmlFor="subject">Subject</label> */}
           <input
             type="text"
-            id="subject"
-            name="subject"
-            placeholder="Subject"
+            id="name"
+            name="name"
+            placeholder="Name"
+            onChange={handleChange}
           />
         </div>
         <div className="form-group">
-          {/* <label htmlFor="message">Message</label> */}
-          <textarea name="message" cols="30" rows="1" placeholder="Message" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <textarea
+            name="message"
+            cols="30"
+            rows="1"
+            placeholder="Message"
+            onChange={handleChange}
+          />
         </div>
         <input type="submit" value="Submit" className="button" />
       </form>

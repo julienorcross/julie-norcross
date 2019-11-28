@@ -1,6 +1,6 @@
 import React from 'react';
+
 import './About.scss';
-import me from '../img/charlieandme.jpg';
 
 const About = () => (
   <section className="About">

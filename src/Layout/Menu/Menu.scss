@@ -131,7 +131,7 @@
       // transition: 0.4s ease;
       &:before,
       &:after {
-        transition: 0.4s ease transform;
+        transition: 0.2s ease transform;
         content: '';
         position: absolute;
         z-index: 1;
@@ -179,7 +179,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             border-radius: 0.2rem;
-            transition: 0.2s ease-in-out color;
+            transition: color 0.2s ease-in-out 0.1;
             &:hover {
               color: $primary-color;
             }
