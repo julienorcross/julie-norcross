@@ -1,6 +1,9 @@
+@import '../Layout/variables.scss';
+
 .Footer {
+  font-family: $secondary-fonts;
   color: rgb(177, 177, 177);
-  font-size: 0.8rem;
+  font-size: 0.4rem;
   text-align: center;
   margin-top: 4rem;
 }
