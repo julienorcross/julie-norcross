@@ -11,7 +11,7 @@ import Footer from './Footer/Footer';
 import NotFound from './NotFound/NotFound';
 import WorkItem from './Work/WorkItem/WorkItem';
 import Spinner from './Spinner/Spinner';
-import getWorkItems from './getWorkItems';
+import getWorkItems from './Actions/getWorkItems';
 
 const App = () => {
   // useState
@@ -61,7 +61,7 @@ const App = () => {
     <BrowserRouter>
       <div className="container">
         <Header />
-        {isLoading ? <Spinner></Spinner> : renderRoutes()}
+        {isLoading ? <Spinner /> : renderRoutes()}
         <Footer></Footer>
       </div>
     </BrowserRouter>

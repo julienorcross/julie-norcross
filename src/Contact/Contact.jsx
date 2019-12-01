@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import './Contact.scss';
-import sendEmail from './sendEmail';
+import sendEmail from '../Actions/sendEmail';
 
 const Contact = () => {
   const [success, setSuccess] = useState(null);
