@@ -28,7 +28,8 @@ async function getWorkItems() {
         slideshow: slideshow.map(slide => ({
           url: slide.url,
           alt: slide.alt,
-          sizes: slide.sizes
+          sizes: slide.sizes,
+          aspectRatio: slide.height / slide.width
         }))
       };
     })

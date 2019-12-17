@@ -27,11 +27,21 @@ const WorkItem = ({ item, match }) => {
     return workItem.slug === match.params.workSlug;
   };
 
-  const calculateImageHeight = item => {
+  const findAspectRatio = item => {
+    let aspectRatio = 10;
+    item.slideshow.map(img => {
+      if (img.aspectRatio < aspectRatio) {
+        aspectRatio = img.aspectRatio;
+      }
+    });
+    return calculateImageHeight(aspectRatio);
+  };
+
+  const calculateImageHeight = aspectRatio => {
     if (width >= 964) {
-      return item.aspectRatio * 900;
+      return aspectRatio * 900;
     } else {
-      return item.aspectRatio * (width - 64);
+      return aspectRatio * (width - 64);
     }
   };
 
@@ -41,8 +51,8 @@ const WorkItem = ({ item, match }) => {
   if (!item) {
     return <Redirect to="/404" />;
   }
-  const height = '500px';
-  // const height = this.calculateImageHeight(item);
+  // const height = '500px';
+  const height = findAspectRatio(item);
   return (
     <div className="work-item-wrapper">
       <WorkIntro item={item} />
