@@ -12,6 +12,7 @@ import NotFound from './NotFound/NotFound';
 import WorkItem from './Work/WorkItem/WorkItem';
 import Spinner from './Spinner/Spinner';
 import getWorkItems from './Actions/getWorkItems';
+import ScrollToTop from './ScrollToTop';
 
 const App = () => {
   // useState
@@ -59,11 +60,13 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="container">
-        <Header />
-        {isLoading ? <Spinner /> : renderRoutes()}
-        <Footer></Footer>
-      </div>
+      <ScrollToTop>
+        <div className="container">
+          <Header />
+          {isLoading ? <Spinner /> : renderRoutes()}
+          <Footer></Footer>
+        </div>
+      </ScrollToTop>
     </BrowserRouter>
   );
 };
