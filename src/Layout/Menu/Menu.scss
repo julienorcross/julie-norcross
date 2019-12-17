@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: $primary-color;
+    background-color: $primary-500;
     height: 100vh;
     transition: 0.4s ease width;
   }
@@ -36,7 +36,7 @@
       li {
         text-align: center;
         list-style: none;
-        color: #fff;
+        color: $primary-100;
         font-size: 4rem;
         padding: 1rem 0 0 1rem;
 
@@ -56,7 +56,7 @@
         }
         .nav-link {
           position: relative;
-          color: #fff;
+          color: $primary-100;
           &:hover {
             &:after {
               width: 100%;
@@ -124,7 +124,7 @@
       position: relative;
       flex: none;
       width: 100%;
-      background: $primary-color;
+      background: $primary-500;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -181,14 +181,14 @@
             border-radius: 0.2rem;
             transition: color 0.2s ease-in-out 0.1;
             &:hover {
-              color: $primary-color;
+              color: $primary-500;
             }
           }
           .curr {
-            color: white;
-            background: $primary-color;
+            color: $primary-100;
+            background: $primary-500;
             &:hover {
-              background: $primary-color;
+              background: $primary-500;
               color: white;
             }
           }

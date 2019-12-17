@@ -4,12 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  // &:focus {
-  //   // outline: none;
-  //   outline: solid 3px $primary-light-color;
-  //   border-radius: 3px;
-  // }
 }
 
 body {
@@ -21,11 +15,11 @@ body {
 }
 
 ::selection {
-  background: $primary-color; /* WebKit/Blink Browsers */
+  background: $primary-500; /* WebKit/Blink Browsers */
   color: #fff;
 }
 ::-moz-selection {
-  background: $primary-color; /* Gecko Browsers */
+  background: $primary-500; /* Gecko Browsers */
   color: #fff;
 }
 
@@ -67,8 +61,8 @@ form input[type='submit'] {
   outline: none;
   border: none;
   cursor: pointer;
-  background-color: $primary-color;
-  color: #fff;
+  background-color: $primary-500;
+  color: $primary-100;
   font-family: $primary-fonts;
   font-weight: 700;
   font-size: 1rem;
@@ -76,7 +70,7 @@ form input[type='submit'] {
   border-radius: 0.2rem;
 
   &:hover {
-    background-color: $primary-dark-color;
+    background-color: $primary-600;
   }
 }
 
