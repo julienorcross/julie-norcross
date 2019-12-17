@@ -29,7 +29,7 @@ async function getWorkItems() {
           url: slide.url,
           alt: slide.alt,
           sizes: slide.sizes,
-          aspectRatio: slide.height / slide.width
+          height: slide.height
         }))
       };
     })

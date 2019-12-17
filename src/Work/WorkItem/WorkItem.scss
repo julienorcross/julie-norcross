@@ -1,7 +1,16 @@
 .work-item-wrapper {
   padding-bottom: 1rem;
+
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
   .carousel {
     padding-bottom: 0.3rem;
+
+    .slide {
+      background: transparent;
+    }
     .slider-wrapper .custom-slide {
       overflow: auto;
       overflow-y: scroll;
