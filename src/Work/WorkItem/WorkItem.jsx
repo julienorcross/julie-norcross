@@ -17,7 +17,9 @@ const WorkItem = ({ item }) => {
         showStatus={false}
         dynamicHeight
         showArrows={false}
-        showIndicators={false}>
+        showIndicators={false}
+        thumbWidth="50px"
+        swipeScrollTolerance="2">
         {item.slideshow.map(img => {
           return (
             <div key={img.url} className="custom-slide">
