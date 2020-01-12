@@ -10,12 +10,7 @@ const WorkIntro = props => {
 
   return (
     <div className="work-intro-wrapper">
-      <div
-        className="work-intro-img"
-        style={{
-          backgroundImage: `url(${featuredImage.url})`
-        }}
-      />
+      <img src={featuredImage.url} className="work-intro-img" alt="" />
       <div className="work-intro-text">
         <h2 className="work-intro-title">{title}</h2>
         <h3 className="work-intro-subtitle">
