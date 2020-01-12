@@ -4,11 +4,14 @@ import './Display.scss';
 const Display = ({ images, description }) => {
   return (
     <div className="Display">
-      {images.map(image => (
-        <div>
-          <img src={image.url} alt={images.alt} className="img" />
-        </div>
-      ))}
+      <div className="flex">
+        {images.map(image => (
+          <div>
+            <img src={image.url} alt={images.alt} className="img" />
+          </div>
+        ))}
+      </div>
+      <p className="caption">{description}</p>
     </div>
   );
 };
