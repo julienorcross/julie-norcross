@@ -1,0 +1,14 @@
+.Display {
+  display: flex;
+  // grid-template-columns: repeat(2, 1fr);
+  // grid-gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  div {
+    margin: 0 0.5rem;
+    img {
+      height: 75vh;
+    }
+  }
+}

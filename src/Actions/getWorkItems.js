@@ -12,11 +12,26 @@ async function getWorkItems() {
         subtitle,
         description,
         featured_image,
-        slideshow
+        slideshow,
+        display,
+        display_description
       } = acf;
+
+      function getSlideshow(slideshow) {
+        let arr = [];
+        if (slideshow) {
+          arr = slideshow.map(slide => ({
+            url: slide.url,
+            alt: slide.alt,
+            sizes: slide.sizes,
+            height: slide.height
+          }));
+        }
+        return arr;
+      }
       return {
         title: title.rendered,
-        subtitle: subtitle,
+        subtitle,
         slug,
         sortOrder: parseInt(sort_order),
         description,
@@ -25,12 +40,9 @@ async function getWorkItems() {
           alt: featured_image.alt,
           sizes: featured_image.sizes
         },
-        slideshow: slideshow.map(slide => ({
-          url: slide.url,
-          alt: slide.alt,
-          sizes: slide.sizes,
-          height: slide.height
-        }))
+        slideshow: getSlideshow(slideshow),
+        display: getSlideshow(display),
+        displayDescription: display_description
       };
     })
     .sort((a, b) => a.sortOrder - b.sortOrder);
