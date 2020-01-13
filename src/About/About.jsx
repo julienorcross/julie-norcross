@@ -26,31 +26,43 @@ const About = () => (
         </p>
         <ul>
           <li>
-            <a href="https://generalassemb.ly/education/learn-html-css-web-design-online">
+            <a
+              href="https://generalassemb.ly/education/learn-html-css-web-design-online"
+              target="_blank">
               General Assembly HTML, CSS & Web Design Circuit
             </a>
           </li>
           <li>
-            <a href="https://refactoringui.com/book/">Refactoring UI</a>
+            <a href="https://refactoringui.com/book/" target="_blank">
+              Refactoring UI
+            </a>
           </li>
           <li>
-            <a href="https://designcode.io/design-system-in-figma">
+            <a
+              href="https://designcode.io/design-system-in-figma"
+              target="_blank">
               DesignCode.IO Figma Design System
             </a>
           </li>
           <li>
-            <a href="https://www.udemy.com/course/modern-html-css-from-the-beginning/">
+            <a
+              href="https://www.udemy.com/course/modern-html-css-from-the-beginning/"
+              target="_blank">
               Modern HTML & CSS from the beginning
             </a>
           </li>
           <li>
-            <a href="https://www.udemy.com/course/modern-javascript-from-the-beginning/">
+            <a
+              href="https://www.udemy.com/course/modern-javascript-from-the-beginning/"
+              target="_blank">
               Modern JavaScript from the beginning
             </a>
           </li>
           <li>
-            <a href="https://www.udemy.com/course/modern-react-bootcamp/">
-              The Modern React Bootcam
+            <a
+              href="https://www.udemy.com/course/modern-react-bootcamp/"
+              target="_blank">
+              The Modern React Bootcamp
             </a>
           </li>
         </ul>
