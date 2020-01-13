@@ -13,35 +13,63 @@ const About = () => (
       <div className="about-intro">
         <p>
           I discovered my love for design at age 11, when I first got my hands
-          on PhotoShop (I used it to make sick signature graphics for
-          <span className="emphasize"> American Idol</span> forums). My brief
-          stint as an engineering major in college introduced me to computer
-          science, and I fell in love with the structure and problem solving of
-          writing code. I graduated from University of Maryland, College Park
-          with a BA in graphic design, and continued to study code on my own.
+          on Photoshop (I used it to make sick signature graphics for{' '}
+          <em>American Idol</em> forums). I graduated from University of
+          Maryland, College Park with a BA in graphic design in 2016. Since
+          graduating college, I've been working at the John F. Kennedy Center
+          for the Performing Arts as a senior graphic designer. I am the head
+          designer for the Washington National Opera, and also create print and
+          digital visuals for comedy, jazz, and contemporary music performances.
+          I am a lifelong learner and have continued expanding my skillset with
+          bootcamps and online courses covering design, UX/UI, animation, and
+          coding. Some recent favorites include:
         </p>
+        <ul>
+          <li>
+            <a href="https://generalassemb.ly/education/learn-html-css-web-design-online">
+              General Assembly HTML, CSS & Web Design Circuit
+            </a>
+          </li>
+          <li>
+            <a href="https://refactoringui.com/book/">Refactoring UI</a>
+          </li>
+          <li>
+            <a href="https://designcode.io/design-system-in-figma">
+              DesignCode.IO Figma Design System
+            </a>
+          </li>
+          <li>
+            <a href="https://www.udemy.com/course/modern-html-css-from-the-beginning/">
+              Modern HTML & CSS from the beginning
+            </a>
+          </li>
+          <li>
+            <a href="https://www.udemy.com/course/modern-javascript-from-the-beginning/">
+              Modern JavaScript from the beginning
+            </a>
+          </li>
+          <li>
+            <a href="https://www.udemy.com/course/modern-react-bootcamp/">
+              The Modern React Bootcam
+            </a>
+          </li>
+        </ul>
         <p>
-          Since 2016, I've been working at the John F. Kennedy Center for the
-          Performing Arts as a senior graphic designer. I am the head designer
-          for the Washington National Opera, and also create print and digital
-          collateral for comedy, jazz, and contemporary music performances.
-        </p>
-        <p>
-          Outside of work, you can find me sewing, hosting political debate
-          parties, weight lifting, taking yoga classes, listening to podcasts,
-          and crying at
-          <span className="emphasize"> Planet Earth.</span>
+          Outside of work, you can find me sewing, hosting presidential debate
+          parties, weightlifting, taking yoga classes, attending standup comedy
+          shows, and pointing out every dog in the vicinity.{' '}
+          <a href="https://www.julienorcross.com/contact">Say hi!</a>
         </p>
       </div>
       <div className="about-skills">
-        <h3>Skills/Knowledge</h3>
+        <h3>Skills</h3>
         <ul>
-          <li>Design</li>
+          <li>Graphic Design</li>
           <li>Adobe Creative Suite</li>
-          <li>HTML/CSS</li>
-          <li>Javascript (ES6)</li>
+          <li>HTML/CSS/Sass</li>
+          <li>Javascript</li>
           <li>React</li>
-          <li>SCSS</li>
+          <li>Wordpress</li>
         </ul>
       </div>
     </div>

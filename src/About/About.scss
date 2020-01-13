@@ -1,6 +1,15 @@
 @import '../Layout/variables.scss';
 
 .About {
+  ul {
+    list-style-position: inside;
+  }
+  a {
+    color: $primary-600;
+    &:hover {
+      color: $primary-800;
+    }
+  }
   .bio-image {
     float: right;
     margin: 1rem 0 0rem 1.5rem;
@@ -35,9 +44,6 @@
 
   .about-skills {
     margin-top: 2rem;
-    ul {
-      list-style-position: inside;
-    }
   }
 }
 
