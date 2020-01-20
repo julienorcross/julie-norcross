@@ -10,10 +10,7 @@ const Header = () => (
     {/* <div className="header-brand"> */}
     <Link className="header-brand" to="/">
       <img className="logo" src={logo} alt="" />
-      <div className="header-text">
-        <h1>Julie Norcross</h1>
-        <h3 className="header-subline">Designer & Coder</h3>
-      </div>
+      <h1>Julie Norcross</h1>
     </Link>
     {/* </div> */}
     <Menu className="Menu" />
