@@ -12,17 +12,18 @@ const About = () => (
     <div className="about-text">
       <div className="about-intro">
         <p>
-          I discovered my love for design at age 11, when I first got my hands
-          on Photoshop (I used it to make sick signature graphics for{' '}
-          <em>American Idol</em> forums). I graduated from University of
-          Maryland, College Park with a BA in graphic design in 2016. Since
-          graduating college, I've been working at the John F. Kennedy Center
-          for the Performing Arts as a senior graphic designer. I am the head
-          designer for the Washington National Opera, and also create print and
-          digital visuals for comedy, jazz, and contemporary music performances.
-          I am a lifelong learner and have continued expanding my skillset with
-          bootcamps and online courses covering design, UX/UI, animation, and
-          coding. Some recent favorites include:
+          I'm a designer/coder in Washington, D.C. who is interested in using my
+          skills to help people and the progressive causes I care about.
+        </p>
+        <p>
+          In 2016, I received my BA in graphic design from University of
+          Maryland, College Park. Since graduating, I've worked at the John F.
+          Kennedy Center for the Performing Arts as a senior graphic designer. I
+          am the head designer for the Washington National Opera, and also
+          create print and digital visuals for comedy, jazz, and contemporary
+          music performances. I am always expanding my skillset with bootcamps
+          and courses covering design, UX/UI, animation, and coding. Some recent
+          favorites include:
         </p>
         <ul>
           <li>
@@ -68,7 +69,7 @@ const About = () => (
         </ul>
         <p>
           Outside of work, you can find me sewing, hosting presidential debate
-          parties, weightlifting, taking yoga classes, attending standup comedy
+          parties, weightlifting, practicing yoga, attending standup comedy
           shows, and pointing out every dog in the vicinity.{' '}
           <a href="https://www.julienorcross.com/contact">Say hi!</a>
         </p>
@@ -77,8 +78,9 @@ const About = () => (
         <h3>Skills</h3>
         <ul>
           <li>Graphic Design</li>
-          <li>Adobe Creative Suite</li>
+          <li>Adobe Creative Suite (InDesign, Illustrator, Photoshop, etc.)</li>
           <li>HTML/CSS/Sass</li>
+          <li>Figma</li>
           <li>Javascript</li>
           <li>React</li>
           <li>Wordpress</li>
