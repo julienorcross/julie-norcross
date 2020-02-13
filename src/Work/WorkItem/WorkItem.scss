@@ -1,3 +1,15 @@
+@import '../../Layout/variables.scss';
+
+// .carousel .control-next.control-arrow:before {
+//   border-left: 8px solid green;
+// }
+
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid $primary-600 !important;
+}
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid $primary-600 !important;
+}
 .work-item-wrapper {
   padding-bottom: 1rem;
 
@@ -7,7 +19,12 @@
   }
   .carousel {
     padding-bottom: 0.3rem;
-
+    .control-arrow {
+      top: 25%;
+    }
+    button {
+      padding: 1rem 0.3rem;
+    }
     .slide {
       background: transparent;
     }

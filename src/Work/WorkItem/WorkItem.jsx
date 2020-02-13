@@ -19,10 +19,11 @@ const WorkItem = ({ item }) => {
         <Carousel
           showStatus={false}
           dynamicHeight
-          showArrows={false}
-          showIndicators={false}
-          thumbWidth="50px"
-          swipeScrollTolerance="2">
+          // showArrows={true}
+          // showIndicators={true}
+          // thumbWidth="20px"
+          // swipeScrollTolerance="2"
+        >
           {item.slideshow.map(img => {
             return (
               <div key={img.url} className="custom-slide">
