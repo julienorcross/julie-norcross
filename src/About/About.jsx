@@ -29,47 +29,56 @@ const About = () => (
           <li>
             <a
               href="https://frontendmasters.com/courses/design-systems/"
-              target="_blank">
+              target="_blank"
+              rel="noopener noreferrer">
               Design Systems with React & Storybook
             </a>
           </li>
           <li>
             <a
               href="https://generalassemb.ly/education/learn-html-css-web-design-online"
-              target="_blank">
+              target="_blank"
+              rel="noopener noreferrer">
               General Assembly HTML, CSS & Web Design Circuit
             </a>
           </li>
           <li>
-            <a href="https://refactoringui.com/book/" target="_blank">
+            <a
+              href="https://refactoringui.com/book/"
+              target="_blank"
+              rel="noopener noreferrer">
               Refactoring UI
             </a>
           </li>
           <li>
             <a
               href="https://designcode.io/design-system-in-figma"
-              target="_blank">
+              target="_blank"
+              rel="noopener noreferrer">
               DesignCode.IO Figma Design System
             </a>
           </li>
           <li>
             <a
               href="https://www.udemy.com/course/modern-html-css-from-the-beginning/"
-              target="_blank">
+              target="_blank"
+              rel="noopener noreferrer">
               Modern HTML & CSS from the beginning
             </a>
           </li>
           <li>
             <a
               href="https://www.udemy.com/course/modern-javascript-from-the-beginning/"
-              target="_blank">
+              target="_blank"
+              rel="noopener noreferrer">
               Modern JavaScript from the beginning
             </a>
           </li>
           <li>
             <a
               href="https://www.udemy.com/course/modern-react-bootcamp/"
-              target="_blank">
+              target="_blank"
+              rel="noopener noreferrer">
               The Modern React Bootcamp
             </a>
           </li>

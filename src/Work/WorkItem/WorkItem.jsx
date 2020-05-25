@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Redirect } from 'react-router-dom';
 
 import './WorkItem.scss';
@@ -24,7 +24,7 @@ const WorkItem = ({ item }) => {
           // thumbWidth="20px"
           // swipeScrollTolerance="2"
         >
-          {item.slideshow.map(img => {
+          {item.slideshow.map((img) => {
             return (
               <div key={img.url} className="custom-slide">
                 <img src={img.url} alt={img.alt} className="responsive" />
