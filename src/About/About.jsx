@@ -28,6 +28,13 @@ const About = () => (
         <ul>
           <li>
             <a
+              href="https://frontendmasters.com/courses/design-systems/"
+              target="_blank">
+              Design Systems with React & Storybook
+            </a>
+          </li>
+          <li>
+            <a
               href="https://generalassemb.ly/education/learn-html-css-web-design-online"
               target="_blank">
               General Assembly HTML, CSS & Web Design Circuit
