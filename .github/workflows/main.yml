@@ -33,4 +33,3 @@ jobs:
         PORT: 22
         LOCAL_DIR: build
         REMOTE_DIR: julienorcross.com/frontend
-        CI: false
