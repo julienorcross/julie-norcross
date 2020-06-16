@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { theme } from 'utils/theme';
 // import workItems from '../src/data/WorkItems.js';
 
 import './App.scss';
@@ -40,11 +42,11 @@ const App = () => {
         <Route path="/contact" component={Contact} />
         <Route
           path="/work/:workSlug"
-          component={props => {
+          component={(props) => {
             const slug = props.match.params.workSlug;
             return (
               <WorkItem
-                item={workItems.find(item => item.slug === slug)}
+                item={workItems.find((item) => item.slug === slug)}
                 {...props}
                 // items={workItems}
                 // {...props}
@@ -59,15 +61,17 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter>
-      <ScrollToTop>
-        <div className="container">
-          <Header />
-          {isLoading ? <Spinner /> : renderRoutes()}
-          <Footer></Footer>
-        </div>
-      </ScrollToTop>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <ScrollToTop>
+          <div className="container">
+            <Header />
+            {isLoading ? <Spinner /> : renderRoutes()}
+            <Footer></Footer>
+          </div>
+        </ScrollToTop>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 };
 
