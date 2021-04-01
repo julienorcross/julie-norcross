@@ -12,18 +12,22 @@ const About = () => (
     <div className="about-text">
       <div className="about-intro">
         <p>
-          I'm a designer/coder in Washington, D.C. who is interested in using my
-          skills to help people and the progressive causes I care about.
+          I'm a designer and coder who is interested in using my skills to help
+          people and the progressive causes I care about.
         </p>
         <p>
-          In 2016, I received my BA in graphic design from University of
-          Maryland, College Park. Since graduating, I've worked at the John F.
-          Kennedy Center for the Performing Arts as a senior graphic designer. I
-          am the head designer for the Washington National Opera, and also
-          create print and digital visuals for comedy, jazz, and contemporary
-          music performances. I am always expanding my skillset with bootcamps
-          and courses covering design, UX/UI, animation, and coding. Some recent
-          favorites include:
+          For the last five years I have been working at the John F. Kennedy
+          Center for the Performing Arts. Starting as a graphic designer, I
+          moved up to senior graphic designer and then to become the manager of
+          advertising design. I am the head designer for the Washington National
+          Opera, and also create print and digital visuals for comedy, jazz,
+          ballet, dance, and contemporary music performances.
+        </p>
+        <p>
+          I have a BA in graphic design from the University of Maryland, College
+          Park, but I am always expanding my skillset with bootcamps and courses
+          covering design, UX/UI, animation, and coding. Some recentfavorites
+          include:
         </p>
         <ul>
           <li>
