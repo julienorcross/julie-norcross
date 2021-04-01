@@ -26,7 +26,7 @@ const About = () => (
         <p>
           I have a BA in graphic design from the University of Maryland, College
           Park, but I am always expanding my skillset with bootcamps and courses
-          covering design, UX/UI, animation, and coding. Some recentfavorites
+          covering design, UX/UI, animation, and coding. Some recent favorites
           include:
         </p>
         <ul>
