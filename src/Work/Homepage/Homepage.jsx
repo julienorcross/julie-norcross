@@ -5,13 +5,12 @@ import './Homepage.scss';
 const Homepage = ({ items }) => {
   return (
     <div className="work">
-      {items.map(function(currentItem) {
+      {items.map(function (currentItem) {
         return (
           <Thumbnail
             key={currentItem.title}
             alt={currentItem.featuredImage.alt}
-            featuredImage={currentItem.featuredImage.sizes.large}
-            // mainImagePath={currentItem.f}
+            featuredImage={currentItem.thumbnail}
             slug={currentItem.slug}
           />
         );

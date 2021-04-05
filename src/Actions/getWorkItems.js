@@ -5,26 +5,27 @@ async function getWorkItems() {
   const response = await fetch(URL_WORKITEMS);
   const json = await response.json();
   return json
-    .map(wordpressModel => {
+    .map((wordpressModel) => {
       const { acf, title, slug } = wordpressModel;
       const {
         sort_order,
         subtitle,
         description,
         featured_image,
+        home_page_thumbnail,
         slideshow,
         display,
-        display_description
+        display_description,
       } = acf;
 
       function getSlideshow(slideshow) {
         let arr = [];
         if (slideshow) {
-          arr = slideshow.map(slide => ({
+          arr = slideshow.map((slide) => ({
             url: slide.url,
             alt: slide.alt,
             sizes: slide.sizes,
-            height: slide.height
+            height: slide.height,
           }));
         }
         return arr;
@@ -35,14 +36,15 @@ async function getWorkItems() {
         slug,
         sortOrder: parseInt(sort_order),
         description,
+        thumbnail: home_page_thumbnail || featured_image.sizes.large,
         featuredImage: {
           url: featured_image.url,
           alt: featured_image.alt,
-          sizes: featured_image.sizes
+          sizes: featured_image.sizes,
         },
         slideshow: getSlideshow(slideshow),
         display: getSlideshow(display),
-        displayDescription: display_description
+        displayDescription: display_description,
       };
     })
     .sort((a, b) => a.sortOrder - b.sortOrder);
