@@ -7,7 +7,6 @@
 
   .work-intro-img {
     grid-column: 1 / span 2;
-    background: no-repeat center center/contain;
     width: 100%;
   }
 
@@ -33,7 +32,6 @@
   .work-intro-wrapper {
     .work-intro-img {
       grid-column: 1 / span 6;
-      height: 50vh;
     }
     .work-intro-text {
       grid-column: 1 / span 6;
