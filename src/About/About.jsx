@@ -14,7 +14,10 @@ const About = () => (
       <div className="about-intro">
         <p>
           In my day job, I'm the manager of advertising design at the{' '}
-          <a href="https://www.kennedy-center.org/" target="_blank">
+          <a
+            href="https://www.kennedy-center.org/"
+            target="_blank"
+            rel="noopener noreferrer">
             John F. Kennedy Center for the Performing Arts
           </a>{' '}
           where I lead design for the Washington National Opera and create print
@@ -22,9 +25,10 @@ const About = () => (
           music performances.
         </p>
         <p>
-          I have a BA in graphic design from the University of Maryland, College
-          Park and I'm always expanding my skills with bootcamps and courses
-          covering UX/UI design, animation, and coding.
+          I received my BA in graphic design from the University of Maryland,
+          College Park in 2016. I have continued expanding my design skills ever
+          since through bootcamps and courses covering UX/UI design, animation,
+          and coding.
         </p>
         <p>
           Outside of work, you can find me sewing, hiking with my dog, lifting
