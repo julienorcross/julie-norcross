@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './About.scss';
 
@@ -12,32 +13,41 @@ const About = () => (
     <div className="about-text">
       <div className="about-intro">
         <p>
-          I'm a designer and coder who is interested in using my skills to help
-          people and the progressive causes I care about.
-        </p>
-        <p>
-          For the last five years I have been working at the John F. Kennedy
-          Center for the Performing Arts. Starting as a graphic designer, I
-          moved up to senior graphic designer and then to become the manager of
-          advertising design. I am the head designer for the Washington National
-          Opera, and also create print and digital visuals for comedy, jazz,
-          ballet, dance, and contemporary music performances.
+          In my day job, I'm the manager of advertising design at the{' '}
+          <a href="https://www.kennedy-center.org/" target="_blank">
+            John F. Kennedy Center for the Performing Arts
+          </a>{' '}
+          where I lead design for the Washington National Opera and create print
+          and digital visuals for comedy, jazz, ballet, dance, and contemporary
+          music performances.
         </p>
         <p>
           I have a BA in graphic design from the University of Maryland, College
-          Park, but I am always expanding my skillset with bootcamps and courses
-          covering design, UX/UI, animation, and coding. Some recent favorites
-          include:
+          Park and I'm always expanding my skills with bootcamps and courses
+          covering UX/UI design, animation, and coding.
         </p>
+        <p>
+          Outside of work, you can find me sewing, hiking with my dog, lifting
+          weights, and practicing yoga. <Link to="/contact">Say Hi!</Link>
+        </p>
+      </div>
+
+      <div className="about-list">
+        <h3>Skills</h3>
         <ul>
-          <li>
-            <a
-              href="https://frontendmasters.com/courses/design-systems/"
-              target="_blank"
-              rel="noopener noreferrer">
-              Design Systems with React & Storybook
-            </a>
-          </li>
+          <li>Graphic Design</li>
+          <li>Adobe Creative Suite (InDesign, Illustrator, Photoshop, etc.)</li>
+          <li>Figma</li>
+          <li>HTML/CSS/Sass</li>
+          <li>Javascript</li>
+          <li>React</li>
+          <li>Wordpress</li>
+        </ul>
+      </div>
+
+      <div className="about-list">
+        <h3>Courses</h3>
+        <ul>
           <li>
             <a
               href="https://generalassemb.ly/education/learn-html-css-web-design-online"
@@ -48,10 +58,34 @@ const About = () => (
           </li>
           <li>
             <a
+              href="https://academy.zerotomastery.io/p/complete-web-and-mobile-designer"
+              target="_blank"
+              rel="noopener noreferrer">
+              Complete Web & Mobile Designer: UI/UX/Figma
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://frontendmasters.com/courses/design-systems/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Design Systems with React & Storybook
+            </a>
+          </li>
+          <li>
+            <a
               href="https://refactoringui.com/book/"
               target="_blank"
               rel="noopener noreferrer">
               Refactoring UI
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://designingui.com/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Designing User Interfaces
             </a>
           </li>
           <li>
@@ -86,24 +120,14 @@ const About = () => (
               The Modern React Bootcamp
             </a>
           </li>
-        </ul>
-        <p>
-          Outside of work, you can find me sewing, hosting presidential debate
-          parties, weightlifting, practicing yoga, attending standup comedy
-          shows, and pointing out every dog in the vicinity.{' '}
-          <a href="https://www.julienorcross.com/contact">Say hi!</a>
-        </p>
-      </div>
-      <div className="about-skills">
-        <h3>Skills</h3>
-        <ul>
-          <li>Graphic Design</li>
-          <li>Adobe Creative Suite (InDesign, Illustrator, Photoshop, etc.)</li>
-          <li>HTML/CSS/Sass</li>
-          <li>Figma</li>
-          <li>Javascript</li>
-          <li>React</li>
-          <li>Wordpress</li>
+          <li>
+            <a
+              href="https://frontendmasters.com/courses/html-email-v2/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Frontendmasters HTML Emails
+            </a>
+          </li>
         </ul>
       </div>
     </div>
